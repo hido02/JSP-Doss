@@ -20,7 +20,7 @@
     AccountRepository dao = AccountRepository.getInstance();
     ArrayList<Account> listOfAccounts = dao.getAllAccounts();
 %>
-%>
+
 <!-- Wrapper-->
 <div class="wrapper">
     <!-- Hero-->
