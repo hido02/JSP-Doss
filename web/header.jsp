@@ -35,7 +35,7 @@
 <header class="header header-transparent">
     <div class="container-fluid">
         <!-- Brand-->
-        <div class="inner-header"><a class="inner-brand" href="index.html">Boomerang</a></div>
+        <div class="inner-header"><a class="inner-brand" href="index.html">Doss</a></div>
         <!-- Navigation-->
         <div class="inner-navigation collapse">
             <div class="inner-nav">
@@ -72,7 +72,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="account.jsp"><span class="menu-item-span">계좌</span></a>
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="./accounts.jsp"><span class="menu-item-span">계좌</span></a>
                         <div class="mega-menu">
                             <ul class="sub-menu mega-menu-row" data-background="assets/images/menu-1.jpg">
                                 <!-- Column 1-->
@@ -102,7 +102,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">소비</span></a>
+                    <li class="menu-item-has-children"><a href="consume.jsp"><span class="menu-item-span">소비</span></a>
                         <ul class="sub-menu">
                             <li><a href="portfolio-7.html">Carousel</a></li>
                             <li class="menu-item-has-children"><a href="#">Wide</a>
