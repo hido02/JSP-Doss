@@ -21,9 +21,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>11월 소비 625,860 원 (버튼)분석</h2>
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비<br>625,860 원</a></h6>
+                        </div>
+                    </div>
                     <p>
-                        아코디언 (쇼핑에 제일 많이 썻어요) -> progress bar 로 넘어가게<br><div class="accordion-item">
+                       <div class="accordion-item">
                     <!-- Accordion-->
 <%--                    <section class="module">--%>
 <%--                        <div class="container">--%>
@@ -55,9 +59,9 @@
     <!-- Progress Bars-->
     <section class="module divider-top">
         <div class="container">
-            <div class="row">
+            <div class="row" id="progress">
                 <div class="col-lg-6 col-md-9 m-auto text-center">
-                    <h1>소비 분석 리포트</h1>
+                    <h1><br>소비 분석 리포트</h1>
                     <p class="lead">See how your users experience your website in realtime or view trends to see any changes in performance over time.</p>
                 </div>
             </div>
@@ -145,8 +149,8 @@
                         <div class="pricing-icon"><i class="ti-slice"></i></div>
                         <div class="pricing-title">Starter</div>
                     </div>
-                    <div class="pricing-price">도스뱅크 블랙핑크
-                    </div>
+                    <h1><b>도스뱅크 블랙핑크</b>
+                    </h1>
                     <div class="pricing-body">
                         <p>Map where your photos<br>were taken and discover local<br>points of interest.</p>
                     </div>
@@ -157,8 +161,8 @@
                         <div class="pricing-icon"><i class="ti-pin-alt"></i></div>
                         <div class="pricing-title">Standard</div>
                     </div>
-                    <div class="pricing-price"><span>$</span>카카오페이
-                    </div>
+                    <h1><b>카카오페이</b>
+                    </h1>
                     <div class="pricing-body">
                         <p>Map where your photos<br>were taken and discover local<br>points of interest.</p>
                     </div>
@@ -169,8 +173,8 @@
                         <div class="pricing-icon"><i class="ti-marker-alt"></i></div>
                         <div class="pricing-title">Professional</div>
                     </div>
-                    <div class="pricing-price"><span>$</span>계좌에서 쓴 금액
-                    </div>
+                    <h1><b>계좌에서 쓴 금액</b>
+                    </h1>
                     <div class="pricing-body">
                         <p>Map where your photos<br>were taken and discover local<br>points of interest.</p>
                     </div>
@@ -198,130 +202,6 @@
         </div>
     </section>
     <!-- Pricing end-->
-
-<%--    <!-- Testimonials-->--%>
-<%--    <section class="module">--%>
-<%--        <div class="container">--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-lg-6 col-md-9 m-auto text-center">--%>
-<%--                    <h3>Loved by 50,000+ Customers.</h3>--%>
-<%--                    <p class="lead">See how your users experience your website in realtime or view trends to see any changes in performance over time.</p>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-md-12">--%>
-<%--                    <div class="space" data-MY="40px"></div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-md-12">--%>
-<%--                    <div class="owl-carousel review-carousel">--%>
-<%--                        <div class="review-card">--%>
-<%--                            <div class="review-card-content">--%>
-<%--                                <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>--%>
-<%--                            </div>--%>
-<%--                            <div class="review-card-author">--%>
-<%--                                <div class="review-card-author-photo"><img src="assets/images/avatar/1.jpg" alt=""></div>--%>
-<%--                                <div class="review-card-author-info">--%>
-<%--                                    <h6 class="review-card-author-title">Emma Connor</h6><span class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                        <div class="review-card">--%>
-<%--                            <div class="review-card-content">--%>
-<%--                                <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>--%>
-<%--                            </div>--%>
-<%--                            <div class="review-card-author">--%>
-<%--                                <div class="review-card-author-photo"><img src="assets/images/avatar/2.jpg" alt=""></div>--%>
-<%--                                <div class="review-card-author-info">--%>
-<%--                                    <h6 class="review-card-author-title">Sara Smith</h6><span class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                        <div class="review-card">--%>
-<%--                            <div class="review-card-content">--%>
-<%--                                <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>--%>
-<%--                            </div>--%>
-<%--                            <div class="review-card-author">--%>
-<%--                                <div class="review-card-author-photo"><img src="assets/images/avatar/3.jpg" alt=""></div>--%>
-<%--                                <div class="review-card-author-info">--%>
-<%--                                    <h6 class="review-card-author-title">Peter Chapman</h6><span class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                        <div class="review-card">--%>
-<%--                            <div class="review-card-content">--%>
-<%--                                <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>--%>
-<%--                            </div>--%>
-<%--                            <div class="review-card-author">--%>
-<%--                                <div class="review-card-author-photo"><img src="assets/images/avatar/4.jpg" alt=""></div>--%>
-<%--                                <div class="review-card-author-info">--%>
-<%--                                    <h6 class="review-card-author-title">Emma Connor</h6><span class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                        <div class="review-card">--%>
-<%--                            <div class="review-card-content">--%>
-<%--                                <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>--%>
-<%--                            </div>--%>
-<%--                            <div class="review-card-author">--%>
-<%--                                <div class="review-card-author-photo"><img src="assets/images/avatar/1.jpg" alt=""></div>--%>
-<%--                                <div class="review-card-author-info">--%>
-<%--                                    <h6 class="review-card-author-title">Sara Smith</h6><span class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                        <div class="review-card">--%>
-<%--                            <div class="review-card-content">--%>
-<%--                                <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>--%>
-<%--                            </div>--%>
-<%--                            <div class="review-card-author">--%>
-<%--                                <div class="review-card-author-photo"><img src="assets/images/avatar/2.jpg" alt=""></div>--%>
-<%--                                <div class="review-card-author-info">--%>
-<%--                                    <h6 class="review-card-author-title">Peter Chapman</h6><span class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </section>--%>
-<%--    <!-- Testimonials end-->--%>
-
-<%--    <!-- Callout-->--%>
-<%--    <section class="module bg-gray p-t-0">--%>
-<%--        <div class="container">--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-md-11 m-auto">--%>
-<%--                    <div class="space" data-MY="-65px"></div>--%>
-<%--                    <p><img src="assets/images/main/iphone-5.png" alt=""></p>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-md-12">--%>
-<%--                    <div class="space" data-MY="20px"></div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-lg-6 col-md-9 m-auto text-center">--%>
-<%--                    <h3>Ready to Start your Project?</h3>--%>
-<%--                    <p class="lead">See how your users experience your website in realtime or view trends to see any changes in performance over time.</p>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-md-12">--%>
-<%--                    <div class="space" data-MY="20px"></div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="row">--%>
-<%--                <div class="col-md-12">--%>
-<%--                    <p class="text-center"><a class="btn btn-circle btn-brand" href="#">Purchase Template</a></p>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </section>--%>
-<%--    <!-- Callout end-->--%>
 
     <!-- Footer-->
     <footer class="footer">
