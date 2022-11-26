@@ -77,25 +77,6 @@
                         </div>
                     </div>
                 </div>
-<%--                <div class="col-md-4">--%>
-<%--                    <div class="feature">--%>
-<%--                        <div class="feature-thumb"><img src="assets/images/features/2.jpg" alt=""></div>--%>
-<%--                        <div class="feature-content">--%>
-<%--                            <h6>도카</h6>--%>
-<%--                            <p>491,040 원</p><a class="feature-link" href="#">Read more</a>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="col-md-4">--%>
-<%--                    <div class="feature">--%>
-<%--                        <div class="feature-thumb"><img src="assets/images/features/3.jpg" alt=""></div>--%>
-<%--                        <div class="feature-content">--%>
-<%--                            <h6>저금통</h6>--%>
-<%--                            <p>0 원</p><a class="feature-link" href="#">Read more</a>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-
             <%
                 }
             %>
