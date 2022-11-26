@@ -1,6 +1,4 @@
-package dto;
-
-import java.util.ArrayList;
+package handler.dto;
 
 public class Consume {
     private String accountId;

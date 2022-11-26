@@ -1,4 +1,4 @@
-package dao;
+package handler.dao;
 
 import dto.Consume;
 

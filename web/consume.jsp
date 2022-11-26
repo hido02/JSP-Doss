@@ -1,10 +1,15 @@
 <%--C:\theme-boomerang-master\theme-boomerang-master\pricing-1.html--%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="dao.AccountRepository" %>
+<%@ page import="dao.ConsumeRepository" %>
+<%@ page import="dto.Account" %>
+<%@ page import="dto.Consume" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset=dto.Consume"UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -13,7 +18,30 @@
 
 <body>
 <%@include file="header.jsp"%>
+<%
+    ConsumeRepository consumeDAO = ConsumeRepository.getInstance();
+    ArrayList<Consume> listOfConsumes = consumeDAO.getAllConsumes();
+    AccountRepository accountDAO = AccountRepository.getInstance();
+    ArrayList<Account> listOfAccounts = accountDAO.getAllAccounts();
+%>
 
+<%!
+    Integer consumeSum = 0;
+%>
+<%
+    for(int i = 0; i < listOfConsumes.size(); i++) {
+        Consume consume = listOfConsumes.get(i);
+        consumeSum += consume.getConsume();
+    }
+%>
+
+<%
+    // 가장 많은 consumeDetail 구하는 로직
+    for(int i = 0; i < listOfConsumes.size(); i++) {
+        Consume consume = listOfConsumes.get(i);
+
+    }
+%>
 <!-- Wrapper-->
 <div class="wrapper">
     <!-- Hero-->
@@ -23,15 +51,11 @@
                 <div class="col-md-12">
                     <div class="accordion-item">
                         <div class="accordion-item-header">
-                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비<br>625,860 원</a></h6>
+                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비<br><%=consumeSum%> 원</a></h6>
                         </div>
                     </div>
                     <p>
                        <div class="accordion-item">
-                    <!-- Accordion-->
-<%--                    <section class="module">--%>
-<%--                        <div class="container">--%>
-<%--                            <div class="row">--%>
                                     <div class="accordion accordion-brand" id="accordion2">
                                         <div class="accordion-item">
                                             <div class="accordion-item-header">
@@ -144,9 +168,18 @@
         <div class="container">
             <div class="space" data-MY="-60px"></div>
             <div class="row">
+                <%
+                    for(int i = 0; i < listOfConsumes.size(); i++) {
+                        Consume consume = listOfConsumes.get(i);
+                    }
+                    for(int i = 0; i < listOfAccounts.size(); i++) {
+                        Account account = listOfAccounts.get(i);
+                    }
+                %>
                 <div class="col-md-4 pricing-wrapper">
                     <div class="pricing-header">
-                        <div class="pricing-icon"><i class="ti-slice"></i></div>
+<%--                        <img src="assets/images/card/<%=account.getFilename()%>"--%>
+<%--                        <div class="pricing-icon"><i class="ti-slice"></i></div>--%>
                         <div class="pricing-title">Starter</div>
                     </div>
                     <h1><b>도스뱅크 블랙핑크</b>

@@ -1,32 +1,20 @@
-package dto;
+package handler.dto;
 
-import java.util.ArrayList;
-
-public class Consume {
+public class Account {
     private String accountId;
     private String accountName;
-
-    public void setConsume(int consume) {
-        this.consume = consume;
-    }
-
-    public String getConsumeDetail() {
-        return consumeDetail;
-    }
-
-    public void setConsumeDetail(String consumeDetail) {
-        this.consumeDetail = consumeDetail;
-    }
-
-    private int consume;
-    private String consumeDetail;
+    private Integer balance;
+    private String bank;
     private String filename;
 
-    public Consume() { super(); }
+    public Account() {
+        super();
+    }
 
-    public Consume(String accountId, String accountName) {
+    public Account(String accountId, String accountName, Integer balance) {
         this.accountId = accountId;
         this.accountName = accountName;
+        this.balance = balance;
     }
 
     public String getAccountId() {
@@ -45,7 +33,20 @@ public class Consume {
         this.accountName = accountName;
     }
 
-    public Integer getConsume() { return consume;
+    public Integer getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Integer balance) {
+        this.balance = balance;
+    }
+
+    public String getBank() {
+        return bank;
+    }
+
+    public void setBank(String bank) {
+        this.bank = bank;
     }
 
     public String getFilename() {
@@ -55,5 +56,4 @@ public class Consume {
     public void setFilename(String filename) {
         this.filename = filename;
     }
-
 }
