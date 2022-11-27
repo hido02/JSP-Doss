@@ -6,6 +6,8 @@ public class Account {
     private Integer balance;
     private String bank;
     private String filename;
+    private Integer consume;
+    private String consumeDetail;
 
     public Account() {
         super();
@@ -55,5 +57,21 @@ public class Account {
 
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    public Integer getConsume() {
+        return consume;
+    }
+
+    public void setConsume(Integer consume) {
+        this.consume = consume;
+    }
+
+    public String getConsumeDetail() {
+        return consumeDetail;
+    }
+
+    public void setConsumeDetail(String consumeDetail) {
+        this.consumeDetail = consumeDetail;
     }
 }

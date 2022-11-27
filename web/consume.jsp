@@ -80,6 +80,16 @@
     </section>
     <!-- Hero end-->
 
+<%--    <%--%>
+<%--        // consumeDetail 퍼센트 구하는 로직--%>
+<%--        String[] detail = new String[10];--%>
+<%--        for(int i = 0; i < listOfAccounts.size(); i++) {--%>
+<%--            Account account = listOfAccounts.get(i);--%>
+<%--            detail[i] = account.getConsumeDetail();--%>
+<%--        }--%>
+
+<%--    %>--%>
+
     <!-- Progress Bars-->
     <section class="module divider-top">
         <div class="container">
@@ -98,58 +108,72 @@
                 <div class="col-md-6">
                     <div class="progress-item">
                         <div class="progress-title">
+
                             <h6>이체<span class="float-right"><span class="progress-number"></span>%</span>
                             </h6>
                         </div>
                         <div class="progress">
                             <div class="progress-bar bg-brand" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+
                         </div>
                     </div>
                     <div class="progress-item">
                         <div class="progress-title">
+
                             <h6>식비<span class="float-right"><span class="progress-number"></span>%</span>
                             </h6>
+
                         </div>
                         <div class="progress">
+
                             <div class="progress-bar bg-brand" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+
                         </div>
                     </div>
                     <div class="progress-item">
                         <div class="progress-title">
+
                             <h6>카페/간식<span class="float-right"><span class="progress-number"></span>%</span>
                             </h6>
                         </div>
                         <div class="progress">
                             <div class="progress-bar bg-brand" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="progress-item">
                         <div class="progress-title">
+
                             <h6>쇼핑<span class="float-right"><span class="progress-number"></span>%</span>
                             </h6>
                         </div>
                         <div class="progress">
                             <div class="progress-bar bg-brand" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+
                         </div>
                     </div>
                     <div class="progress-item">
                         <div class="progress-title">
+
                             <h6>기타<span class="float-right"><span class="progress-number"></span>%</span>
                             </h6>
                         </div>
                         <div class="progress">
                             <div class="progress-bar bg-brand" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+
                         </div>
                     </div>
                     <div class="progress-item">
                         <div class="progress-title">
+
                             <h6>그 외<span class="float-right"><span class="progress-number"></span>%</span>
                             </h6>
                         </div>
                         <div class="progress">
                             <div class="progress-bar bg-brand" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+
                         </div>
                     </div>
                 </div>
@@ -169,51 +193,30 @@
             <div class="space" data-MY="-60px"></div>
             <div class="row">
                 <%
-                    for(int i = 0; i < listOfConsumes.size(); i++) {
-                        Consume consume = listOfConsumes.get(i);
-                    }
                     for(int i = 0; i < listOfAccounts.size(); i++) {
                         Account account = listOfAccounts.get(i);
-                    }
+//                    }
                 %>
                 <div class="col-md-4 pricing-wrapper">
                     <div class="pricing-header">
-<%--                        <img src="assets/images/card/<%=account.getFilename()%>"--%>
+                        <div class="pricing-icon"><img src="assets/images/card/<%=account.getFilename()%>"></div>
 <%--                        <div class="pricing-icon"><i class="ti-slice"></i></div>--%>
                         <div class="pricing-title">Starter</div>
                     </div>
-                    <h1><b>도스뱅크 블랙핑크</b>
+                    <h1><b><%=account.getAccountName()%>></b>
                     </h1>
                     <div class="pricing-body">
-                        <p>Map where your photos<br>were taken and discover local<br>points of interest.</p>
+                        <p>
+<%--                            <%=account.getConsume()%> 원--%>
+                        </p>
                     </div>
                     <div class="pricing-footer"><a class="btn btn-circle btn-brand" href="#">Download</a></div>
                 </div>
-                <div class="col-md-4 pricing-wrapper pricing-popular">
-                    <div class="pricing-header">
-                        <div class="pricing-icon"><i class="ti-pin-alt"></i></div>
-                        <div class="pricing-title">Standard</div>
-                    </div>
-                    <h1><b>카카오페이</b>
-                    </h1>
-                    <div class="pricing-body">
-                        <p>Map where your photos<br>were taken and discover local<br>points of interest.</p>
-                    </div>
-                    <div class="pricing-footer"><a class="btn btn-circle btn-brand" href="#">Download</a></div>
-                </div>
-                <div class="col-md-4 pricing-wrapper pricing-popular">
-                    <div class="pricing-header">
-                        <div class="pricing-icon"><i class="ti-marker-alt"></i></div>
-                        <div class="pricing-title">Professional</div>
-                    </div>
-                    <h1><b>계좌에서 쓴 금액</b>
-                    </h1>
-                    <div class="pricing-body">
-                        <p>Map where your photos<br>were taken and discover local<br>points of interest.</p>
-                    </div>
-                    <div class="pricing-footer"><a class="btn btn-circle btn-brand" href="#">Download</a></div>
-                </div>
+                <%
+                    }
+                %>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="space" data-MY="20px"></div>
