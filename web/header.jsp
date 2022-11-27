@@ -131,7 +131,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">습관</span></a>
+                    <li class="menu-item-has-children"><a href="hobby.jsp"><span class="menu-item-span">습관</span></a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Classic</a>
                                 <ul class="sub-menu">
@@ -162,7 +162,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">상점</span></a>
+
+                    <li class="menu-item-has-children"><a href="shop.jsp"><span class="menu-item-span">상점</span></a>
                         <ul class="sub-menu">
                             <li><a href="shop-grid-1.html">Shop 2 Columns</a></li>
                             <li><a href="shop-grid-2.html">Shop 3 Columns</a></li>
@@ -172,6 +173,7 @@
                             <li><a href="shop-cart-1.html">Cart</a></li>
                         </ul>
                     </li>
+
                     <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#"><span class="menu-item-span">인사</span></a>
                         <div class="mega-menu">
                             <ul class="sub-menu mega-menu-row" data-background="assets/images/menu-2.jpg">

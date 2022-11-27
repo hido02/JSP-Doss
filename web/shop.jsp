@@ -18,30 +18,7 @@
 
 <body>
 <%@include file="header.jsp"%>
-<%
-    ConsumeRepository consumeDAO = ConsumeRepository.getInstance();
-    ArrayList<Consume> listOfConsumes = consumeDAO.getAllConsumes();
-    AccountRepository accountDAO = AccountRepository.getInstance();
-    ArrayList<Account> listOfAccounts = accountDAO.getAllAccounts();
-%>
 
-<%!
-    Integer consumeSum = 0;
-%>
-<%
-    for(int i = 0; i < listOfConsumes.size(); i++) {
-        Consume consume = listOfConsumes.get(i);
-        consumeSum += consume.getConsume();
-    }
-%>
-
-<%
-    // 가장 많은 consumeDetail 구하는 로직
-    for(int i = 0; i < listOfConsumes.size(); i++) {
-        Consume consume = listOfConsumes.get(i);
-
-    }
-%>
 <!-- Wrapper-->
 <div class="wrapper">
     <!-- Hero-->
@@ -49,195 +26,129 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비<br><%=consumeSum%> 원</a></h6>
-                        </div>
-                    </div>
-                    <p>
-                       <div class="accordion-item">
-                                    <div class="accordion accordion-brand" id="accordion2">
-                                        <div class="accordion-item">
-                                            <div class="accordion-item-header">
-                                                <h6><a class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5">(쇼핑)에 제일 많이 썻어요</a></h6>
-                                            </div>
-                                            <div class="collapse" id="collapse-5" data-parent="#accordion2">
-                                                <div class="accordion-item-body">
-                                                    <p>
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </section>--%>
-                    </p>
+                    <h1>상점</h1>
+                    <p>지정된 상점에서 물건을 구매하면 포인트가 쌓입니다</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- Hero end-->
 
-<%--    <%--%>
-<%--        // consumeDetail 퍼센트 구하는 로직--%>
-<%--        String[] detail = new String[10];--%>
-<%--        for(int i = 0; i < listOfAccounts.size(); i++) {--%>
-<%--            Account account = listOfAccounts.get(i);--%>
-<%--            detail[i] = account.getConsumeDetail();--%>
-<%--        }--%>
-
-<%--    %>--%>
-
-    <!-- Progress Bars-->
-    <section class="module divider-top">
+    <!-- Shop Grid-->
+    <section class="module">
         <div class="container">
-            <div class="row" id="progress">
-                <div class="col-lg-6 col-md-9 m-auto text-center">
-                    <h1><br>소비 분석 리포트</h1>
-                    <p class="lead">See how your users experience your website in realtime or view trends to see any changes in performance over time.</p>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="space" data-MY="60px"></div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/1.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">역전우동</h6><span class="shop-item-price">$20.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/2.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">스타벅스 코리아</h6><span class="shop-item-price">$30.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/3.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">롯데월드</h6><span class="shop-item-price">$50.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/4.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">상상기업</h6><span class="shop-item-price">$80.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/5.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">맘스터치</h6><span class="shop-item-price">$100.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/6.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">서브웨이</h6><span class="shop-item-price">$20.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/7.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">쇼미더머니</h6><span class="shop-item-price">$40.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-grid-item">
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/8.jpg" alt=""></a>
+                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
+                        </div>
+                        <div class="shop-item-captions">
+                            <h6 class="shop-item-title">고등래퍼</h6><span class="shop-item-price">$40.00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="progress-item">
-                        <div class="progress-title">
 
-                            <h6>이체<span class="float-right"><span class="progress-number"></span>%</span>
-                            </h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-brand" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-title">
-
-                            <h6>식비<span class="float-right"><span class="progress-number"></span>%</span>
-                            </h6>
-
-                        </div>
-                        <div class="progress">
-
-                            <div class="progress-bar bg-brand" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-title">
-
-                            <h6>카페/간식<span class="float-right"><span class="progress-number"></span>%</span>
-                            </h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-brand" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="progress-item">
-                        <div class="progress-title">
-
-                            <h6>쇼핑<span class="float-right"><span class="progress-number"></span>%</span>
-                            </h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-brand" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-title">
-
-                            <h6>기타<span class="float-right"><span class="progress-number"></span>%</span>
-                            </h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-brand" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-title">
-
-                            <h6>그 외<span class="float-right"><span class="progress-number"></span>%</span>
-                            </h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-brand" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="space" data-MY="40px"></div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Progress Bars end-->
 
-    <!-- Pricing-->
-    <section class="module bg-gray p-t-0 p-b-40">
-        <div class="container">
-            <div class="space" data-MY="-60px"></div>
-            <div class="row">
-                <%
-                    for(int i = 0; i < listOfAccounts.size(); i++) {
-                        Account account = listOfAccounts.get(i);
-//                    }
-                %>
-                <div class="col-md-4 pricing-wrapper">
-                    <div class="pricing-header">
-                        <div class="pricing-icon"><img src="assets/images/card/<%=account.getFilename()%>"></div>
-<%--                        <div class="pricing-icon"><i class="ti-slice"></i></div>--%>
-                        <div class="pricing-title">Starter</div>
-                    </div>
-                    <h1><b><%=account.getAccountName()%>></b>
-                    </h1>
-                    <div class="pricing-body">
-                        <p>
-<%--                            <%=account.getConsume()%> 원--%>
-                        </p>
-                    </div>
-                    <div class="pricing-footer"><a class="btn btn-circle btn-brand" href="#">Download</a></div>
-                </div>
-                <%
-                    }
-                %>
-            </div>
-
+            <!-- Page Navigation-->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="space" data-MY="20px"></div>
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item"><a class="page-link" href="#"><span class="fas fa-angle-left"></span></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><span class="fas fa-angle-right"></span></a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-10 m-auto">
-                    <div class="owl-carousel clients-carousel">
-                        <div class="client"><img src="assets/images/clients/1.png" alt=""></div>
-                        <div class="client"><img src="assets/images/clients/2.png" alt=""></div>
-                        <div class="client"><img src="assets/images/clients/3.png" alt=""></div>
-                        <div class="client"><img src="assets/images/clients/4.png" alt=""></div>
-                        <div class="client"><img src="assets/images/clients/5.png" alt=""></div>
-                        <div class="client"><img src="assets/images/clients/6.png" alt=""></div>
-                        <div class="client"><img src="assets/images/clients/7.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
+            <!-- Page Navigation end-->
         </div>
     </section>
-    <!-- Pricing end-->
+    <!-- Shop Grid-->
+
+</div>
+</section>
+<!-- Shop Grid-->
 
     <!-- Footer-->
     <footer class="footer">
