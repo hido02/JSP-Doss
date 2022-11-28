@@ -10,6 +10,7 @@
 <!-- Favicons-->
 <link rel="shortcut icon" href="assets/images/favicon.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="assets/images/grabbing.png">
 <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
 <!-- Web Fonts-->
@@ -35,16 +36,16 @@
 <header class="header header-transparent">
     <div class="container-fluid">
         <!-- Brand-->
-        <div class="inner-header"><a class="inner-brand" href="index.html">Doss</a></div>
+        <div class="inner-header"><a class="inner-brand" href="index.jsp">Doss</a></div>
         <!-- Navigation-->
         <div class="inner-navigation collapse">
             <div class="inner-nav">
                 <ul>
-                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#"><span class="menu-item-span">Home</span></a>
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="index.jsp"><span class="menu-item-span">Home</span></a>
                         <div class="mega-menu">
                             <ul class="sub-menu mega-menu-row" data-background="assets/images/menu-3.jpg">
                                 <!-- Column 1-->
-                                <li class="menu-item-has-children mega-menu-col"><a href="#">Multi Page</a>
+                                <li class="menu-item-has-children mega-menu-col"><a href="index.jsp">Multi Page</a>
                                     <ul class="sub-menu">
                                         <li><a href="index.html">Parallax</a></li>
                                         <li><a href="index-3.html">Slider - Fade</a></li>
@@ -72,11 +73,11 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="./accounts.jsp"><span class="menu-item-span">계좌</span></a>
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="accounts.jsp"><span class="menu-item-span">계좌</span></a>
                         <div class="mega-menu">
                             <ul class="sub-menu mega-menu-row" data-background="assets/images/menu-1.jpg">
                                 <!-- Column 1-->
-                                <li class="menu-item-has-children mega-menu-col"><a href="#">Pages 1</a>
+                                <li class="menu-item-has-children mega-menu-col"><a href="accounts.jsp">Pages 1</a>
                                     <ul class="sub-menu">
                                         <li><a href="about-1.html">About Us 1</a></li>
                                         <li><a href="about-2.html">About Us 2</a></li>
@@ -105,21 +106,21 @@
                     <li class="menu-item-has-children"><a href="consume.jsp"><span class="menu-item-span">소비</span></a>
                         <ul class="sub-menu">
                             <li><a href="portfolio-7.html">Carousel</a></li>
-                            <li class="menu-item-has-children"><a href="#">Wide</a>
+                            <li class="menu-item-has-children"><a href="consume.jsp">Wide</a>
                                 <ul class="sub-menu">
                                     <li><a href="portfolio-1.html">5 Columns</a></li>
                                     <li><a href="portfolio-2.html">4 Columns</a></li>
                                     <li><a href="portfolio-3.html">3 Columns</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><a href="#">Boxed</a>
+                            <li class="menu-item-has-children"><a href="consume.jsp">Boxed</a>
                                 <ul class="sub-menu">
                                     <li><a href="portfolio-4.html">4 Columns</a></li>
                                     <li><a href="portfolio-5.html">3 Columns</a></li>
                                     <li><a href="portfolio-6.html">2 Columns</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><a href="#">Single</a>
+                            <li class="menu-item-has-children"><a href="consume.jsp">Single</a>
                                 <ul class="sub-menu">
                                     <li><a href="portfolio-single-1.html">Sidebar Stack</a></li>
                                     <li><a href="portfolio-single-2.html">Sidebar Slides</a></li>
@@ -133,27 +134,27 @@
                     </li>
                     <li class="menu-item-has-children"><a href="hobby.jsp"><span class="menu-item-span">습관</span></a>
                         <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Classic</a>
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Classic</a>
                                 <ul class="sub-menu">
                                     <li><a href="blog-1.html">Right Sidebar</a></li>
                                     <li><a href="blog-2.html">Left Sidebar</a></li>
                                     <li><a href="blog-3.html">No Sidebar</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><a href="#">Masonry</a>
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Masonry</a>
                                 <ul class="sub-menu">
                                     <li><a href="blog-4.html">Right Sidebar</a></li>
                                     <li><a href="blog-5.html">Left Sidebar</a></li>
                                     <li><a href="blog-6.html">No Sidebar</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><a href="#">Side Image</a>
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Side Image</a>
                                 <ul class="sub-menu">
                                     <li><a href="blog-7.html">Right Sidebar</a></li>
                                     <li><a href="blog-8.html">Left Sidebar</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><a href="#">Single Post</a>
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Single Post</a>
                                 <ul class="sub-menu">
                                     <li><a href="blog-single-1.html">Right Sidebar</a></li>
                                     <li><a href="blog-single-2.html">Left Sidebar</a></li>
@@ -224,9 +225,7 @@
         </div>
         <div class="extra-nav">
             <ul>
-                <li><a class="top-bar-cart" href="shop-cart-1.html"><span class="menu-item-span"><i class="ti-shopping-cart"></i><span>3</span></span></a></li>
-                <li><a class="off-canvas-open" href="#"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
-                <li class="nav-toggle"><a href="#" data-toggle="collapse" data-target=".inner-navigation"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+                <li><a class="top-bar-cart" href="login.jsp"><span class="menu-item-span"><i class="ti-shopping-cart"></i><span>3</span></span></a></li>
             </ul>
         </div>
     </div>
