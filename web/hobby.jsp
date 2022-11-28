@@ -6,6 +6,8 @@
 <%@ page import="dao.ConsumeRepository" %>
 <%@ page import="dto.Account" %>
 <%@ page import="dto.Consume" %>
+<%@ page import="dao.HobbyRepository" %>
+<%@ page import="dto.Hobby" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,29 +21,10 @@
 <body>
 <%@include file="header.jsp"%>
 <%
-    ConsumeRepository consumeDAO = ConsumeRepository.getInstance();
-    ArrayList<Consume> listOfConsumes = consumeDAO.getAllConsumes();
-    AccountRepository accountDAO = AccountRepository.getInstance();
-    ArrayList<Account> listOfAccounts = accountDAO.getAllAccounts();
+    HobbyRepository dao = HobbyRepository.getInstance();
+    ArrayList<Hobby> listOfHobbys = dao.getAllHobbys();
 %>
 
-<%!
-    Integer consumeSum = 0;
-%>
-<%
-    for(int i = 0; i < listOfConsumes.size(); i++) {
-        Consume consume = listOfConsumes.get(i);
-        consumeSum += consume.getConsume();
-    }
-%>
-
-<%
-    // 가장 많은 consumeDetail 구하는 로직
-    for(int i = 0; i < listOfConsumes.size(); i++) {
-        Consume consume = listOfConsumes.get(i);
-
-    }
-%>
 <!-- Wrapper-->
 <div class="wrapper">
     <!-- Hero-->
@@ -72,13 +55,19 @@
                 </div>
             </div>
             <div class="row">
+                <%
+                    for(int i = 0; i < 3; i++) {
+                        Hobby hobby = listOfHobbys.get(i);
+//                    }
+                %>
                 <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/1.jpg" alt="">
+'                    <div class="team-item">
+<%--                        <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
+    <div class="team-image"><img src="assets/images/team/1.jpg" alt="">
                             <div class="team-wrap">
                                 <div class="team-content">
-                                    <h6 class="team-name">매일 아침 7시 기상, 새벽 2시 취침</h6>
-                                    <div class="team-role">김독기</div>
+                                    <h6 class="team-name"><%=hobby.getHobbyName()%></h6>
+                                    <div class="team-role"><%=hobby.getHobbyDetail()%></div>
                                 </div>
                                 <div class="team-content-social">
                                     <ul>
@@ -91,159 +80,72 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/2.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">3kg 증량</h6>
-                                    <div class="team-role">계란, 단백질, 고열량</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/3.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">교수 되기</h6>
-                                    <div class="team-role">명예 쌓은 후 40세에 퇴직, 임용 준비 후 대학원생들 괴롭히기</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/4.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">1일 1커밋/티스토리 1일 1업로드</h6>
-                                    <div class="team-role">기록 안 하면 죽음</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/5.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">스트레이키즈 콘서트 가기</h6>
-                                    <div class="team-role">10만원 모으기</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/6.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">말하는대로~~~말하는대로~~~</h6>
-                                    <div class="team-role">처진달팽이</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/6.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">말하는대로~~~말하는대로~~~</h6>
-                                    <div class="team-role">처진달팽이</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/6.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">말하는대로~~~말하는대로~~~</h6>
-                                    <div class="team-role">처진달팽이</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-image"><img src="assets/images/team/6.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name">말하는대로~~~말하는대로~~~</h6>
-                                    <div class="team-role">처진달팽이</div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <%
+                    }
+                %>
             </div>
+
+            <div class="row">
+                <%
+                    for(int j = 3; j < 6; j++) {
+                        Hobby hobby = listOfHobbys.get(j);
+//                    }
+                %>
+                <div class="col-lg-4 col-md-6">
+                    '                    <div class="team-item">
+<%--                    <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
+                        <div class="team-image"><img src="assets/images/team/2.jpg" alt="">
+                        <div class="team-wrap">
+                            <div class="team-content">
+                                <h6 class="team-name"><%=hobby.getHobbyName()%></h6>
+                                <div class="team-role"><%=hobby.getHobbyDetail()%></div>
+                            </div>
+                            <div class="team-content-social">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <%
+                    }
+                %>
+            </div>
+
+<%--            <div class="row">--%>
+<%--                <%--%>
+<%--                    for(int k = 6; k < 9; k++) {--%>
+<%--                        Hobby hobby = listOfHobbys.get(k);--%>
+<%--//                    }--%>
+<%--                %>--%>
+<%--                <div class="col-lg-4 col-md-6">--%>
+<%--                    '                    <div class="team-item">--%>
+<%--                    <div class="team-image"><img src="assets/images/team/1.jpg" alt="">--%>
+<%--                        <div class="team-wrap">--%>
+<%--                            <div class="team-content">--%>
+<%--                                <h6 class="team-name"><%=hobby.getHobbyName()%></h6>--%>
+<%--                                <div class="team-role"><%=hobby.getHobbyDetail()%></div>--%>
+<%--                            </div>--%>
+<%--                            <div class="team-content-social">--%>
+<%--                                <ul>--%>
+<%--                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>--%>
+<%--                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>--%>
+<%--                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>--%>
+<%--                                </ul>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                </div>--%>
+<%--                <%--%>
+<%--                    }--%>
+<%--                %>--%>
+<%--            </div>--%>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="space" data-MY="30px"></div>
