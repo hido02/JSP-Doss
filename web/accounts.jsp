@@ -69,11 +69,10 @@
                     <div class="feature">
                         <div class="feature-thumb"><img src="assets/images/card/<%=account.getFilename()%>" alt=""></div>
                         <div class="feature-content">
-                            <p>파일명: <%=account.getFilename()%></p>
                             <h6><%=account.getAccountName()%>></h6>
                             <p><%=account.getBalance()%>원</p>
                             <p><%=account.getBank()%></p>
-                            <a class="feature-link" href="./account.jsp?id=<%=account.getAccountId()%>">Read more</a>
+                            <a class="feature-link" href="./account.jsp?id=<%=account.getAccountId()%>">자세히</a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +109,7 @@
                             <!-- Checkout-->
                                     <div class="row">
                                         <div class="col-md-8 m-auto">
-                                            <form>
+                                            <form action="processAddCard.jsp" enctype="multipart/form-data" method="post">
                                                 <div class="row form-row">
                                                     <div class="col-md-6 form-group">
                                                         <input class="form-control" type="text" placeholder="계좌이름" name="accountName">
@@ -124,7 +123,7 @@
                                                         <input class="form-control" type="text" placeholder="현재 잔액" name="balance">
                                                     </div>
                                                     <div class="col-md-12 form-group">
-                                                        <input class="form-control" type="text" placeholder="카드 사진" name="filename">
+                                                        <input class="form-control" type="text" placeholder="카드 사진" name="filename" type="file">
                                                     </div>
                                                 </div>
                                             </form>

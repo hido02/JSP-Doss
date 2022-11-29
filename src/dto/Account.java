@@ -3,6 +3,7 @@ package dto;
 public class Account {
     private String accountId;
     private String accountName;
+    private Integer accountNumber;
     private Integer balance;
     private String bank;
     private String filename;
@@ -33,6 +34,14 @@ public class Account {
 
     public void setAccountName(String accountName) {
         this.accountName = accountName;
+    }
+
+    public Integer getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(Integer accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public Integer getBalance() {
