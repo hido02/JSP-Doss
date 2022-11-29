@@ -21,6 +21,18 @@
     <link href="assets/css/template.css" rel="stylesheet">
 </head>
 <body>
+
+<!-- Preloader-->
+<div class="page-loader">
+    <div class="page-loader-inner">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+</div>
+<!-- Preloader end-->
+
 <%@include file="header.jsp"%>
 
 <!-- Wrapper-->
@@ -31,23 +43,32 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 m-auto">
                     <div class="m-b-20">
-                        <h6>Sign into your account</h6>
+                        <h6>Create a new account</h6>
                     </div>
                     <div class="m-b-20">
-                        <form action="loginOK.jsp" method="post">
+                        <form action="join_ok.jsp" method="post">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="ID" name="userid">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Pasword" name="password">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Confirm password" name="passwordConfirm">
+                        </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="ID" name="userid">
+                                <input class="form-control" type="email" placeholder="E-mail" name="email">
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="password" placeholder="Pasword" name="password">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-block btn-round btn-brand" type="submit">Login</button>
-                            </div>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-round btn-brand" type="submit">JOIN</button>
+                        </div>
                         </form>
                     </div>
                     <div class="m-b-20">
-                        <p><small>Dont have an account yet? <a href="join.jsp">Create account</a></small></p>
+                        <p><small>By signing up, you agree to the<a href="#">terms of service</a></small></p>
                     </div>
                 </div>
             </div>
