@@ -1,19 +1,28 @@
-<%--C:\theme-boomerang-master\theme-boomerang-master\services-1--%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="dao.AccountRepository" %>
 <%@ page import="dto.Account" %>
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Boomerang - Template</title>
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+    <!-- Web Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Plugins-->
+    <link href="assets/css/plugins.min.css" rel="stylesheet">
+    <!-- Template core CSS-->
+    <link href="assets/css/template.css" rel="stylesheet">
 </head>
-
 <body>
 <%@include file="header.jsp"%>
 <%
@@ -23,125 +32,60 @@
 
 <!-- Wrapper-->
 <div class="wrapper">
-    <!-- Hero-->
-    <section class="module-cover parallax text-center" data-background="assets/images/module-8.jpg" data-overlay="0.5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>계좌</h1>
-                    <p>계좌별 잔액</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero end-->
-
-    <!-- Features-->
-    <section class="module">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-9 m-auto text-center">
-                    <%!
-                        Integer balanceSum = 0;
-                    %>
-                    <%
-                        for(int i = 0; i < listOfAccounts.size(); i++) {
-                            Account account = listOfAccounts.get(i);
-                            balanceSum += account.getBalance();
-                        }
-                    %>
-                    <h1>총 자산 <br><%=balanceSum%> 원</h1>
-                    <p class="lead">계좌 <br> 495,145 원</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="space" data-MY="60px"></div>
-                </div>
-            </div>
-            <div class="row">
-            <%
-                for(int i = 0; i < listOfAccounts.size(); i++) {
-                    Account account = listOfAccounts.get(i);
-//                }
-            %>
-                <div class="col-md-4">
-                    <div class="feature">
-                        <div class="feature-thumb"><img src="assets/images/card/<%=account.getFilename()%>" alt=""></div>
-                        <div class="feature-content">
-                            <p>파일명: <%=account.getFilename()%></p>
-                            <h6><%=account.getAccountName()%>></h6>
-                            <p><%=account.getBalance()%>원</p>
-                            <p><%=account.getBank()%></p>
-                            <a class="feature-link" href="./account.jsp?id=<%=account.getAccountId()%>">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            <%
-                }
-            %>
-            </div>
-        </div>
-    </section>
-    <!-- Features end-->
-
-    <!-- Modal-->
-    <section class="module">
+    <!-- Page Header-->
+    <section class="module-page-title bg-gray">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <p class="m-b-30"><img src="assets/images/main/about-4.jpg" alt=""></p>
-                </div>
-                <div class="col-lg-5 offset-lg-1">
-                    <h2>계좌 등록해봐</h2>
-                    <p class="lead m-b-30">금융사기신고번호는 xxx번</p>
-                    <button class="btn btn-circle btn-outline-brand m-b-30" type="button" data-toggle="modal" data-target="#modal-1">계좌 등록!!</button>
-                </div>
-            </div>
-            <!-- Modal-->
-            <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">계좌 등록!!</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Checkout-->
-                                    <div class="row">
-                                        <div class="col-md-8 m-auto">
-                                            <form>
-                                                <div class="row form-row">
-                                                    <div class="col-md-6 form-group">
-                                                        <input class="form-control" type="text" placeholder="계좌이름" name="accountName">
-                                                    </div>
-                                                    <div class="col-md-6 form-group">
-                                                        <input class="form-control" type="text" placeholder="은행" name="balance">
-                                                    </div>
-                                                </div>
-                                                <div class="row form-row">
-                                                    <div class="col-md-12 form-group">
-                                                        <input class="form-control" type="text" placeholder="현재 잔액" name="balance">
-                                                    </div>
-                                                    <div class="col-md-12 form-group">
-                                                        <input class="form-control" type="text" placeholder="카드 사진" name="filename">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                            <!-- Checkout end-->
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-                            <button class="btn btn-primary" type="button">Save changes</button>
-                        </div>
+                <div class="col-md-6">
+                    <div class="page-title-desc">
+                        <h1 class="page-title-heading">Checkout</h1>
+                        <!--p This theme will shake your world.-->
                     </div>
+                </div>
+                <div class="col-md-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item active">Checkout</li>
+                    </ol>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Modal-->
+    <!-- Page Header end-->
+
+    <!-- Checkout-->
+    <section class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <div class="heading-underline">
+                        <h5 class="m-b-30">계좌 등록!!</h5>
+                    </div>
+                    <form>
+                        <div class="row form-row">
+                            <div class="col-md-6 form-group">
+                                <input class="form-control" type="text" placeholder="계좌이름" name="accountName">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input class="form-control" type="text" placeholder="은행" name="balance">
+                            </div>
+                        </div>
+                        <div class="row form-row">
+                            <div class="col-md-12 form-group">
+                                <input class="form-control" type="text" placeholder="현재 잔액" name="balance">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input class="form-control" type="text" placeholder="카드 사진" name="filename">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-right"><a class="btn btn-brand" href="#">Submit Order</a></div>
+        </div>
+    </section>
+    <!-- Checkout end-->
 
     <!-- Footer-->
     <footer class="footer">
