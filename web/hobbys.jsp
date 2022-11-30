@@ -34,9 +34,9 @@
                 <div class="col-md-12">
                     <h1>습관</h1>
                     <p>하루 습관</p>
-                    </div>
                 </div>
             </div>
+        </div>
     </section>
     <!-- Hero end-->
 
@@ -61,24 +61,24 @@
 //                    }
                 %>
                 <div class="col-lg-4 col-md-6">
-'                    <div class="team-item">
-<%--                        <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
-    <div class="team-image"><img src="assets/images/team/1.jpg" alt="">
-                            <div class="team-wrap">
-                                <div class="team-content">
-                                    <h6 class="team-name"><%=hobby.getHobbyName()%></h6>
-                                    <div class="team-role"><%=hobby.getHobbyDetail()%></div>
-                                </div>
-                                <div class="team-content-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
+                    '                    <div class="team-item">
+                    <%--                        <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
+                    <div class="team-image"><img src="assets/images/team/1.jpg" alt="">
+                        <div class="team-wrap">
+                            <div class="team-content">
+                                <h6 class="team-name"><%=hobby.getHobbyName()%></h6>
+                                <div class="team-role"><%=hobby.getHobbyDetail()%></div>
+                            </div>
+                            <div class="team-content-social">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <%
                     }
@@ -93,8 +93,8 @@
                 %>
                 <div class="col-lg-4 col-md-6">
                     '                    <div class="team-item">
-<%--                    <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
-                        <div class="team-image"><img src="assets/images/team/2.jpg" alt="">
+                    <%--                    <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
+                    <div class="team-image"><img src="assets/images/team/2.jpg" alt="">
                         <div class="team-wrap">
                             <div class="team-content">
                                 <h6 class="team-name"><%=hobby.getHobbyName()%></h6>
