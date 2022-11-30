@@ -20,6 +20,23 @@
     <!-- Template core CSS-->
     <link href="assets/css/template.css" rel="stylesheet">
 </head>
+<script type="text/javascript">
+    function checkLogin() {
+        var form = document.loginForm;
+        if(form.userid.value.length<4 || form.userid.value.length >12){
+            alert("아이디는 4~12자 이내로 입력 가능합니다.")
+            form.id.select();
+            return;
+        }
+        if(form.password.value.length<4){
+            alert("비밀번호는 4자 이상으로 입력해야 합니다!");
+            form.pwd.select();
+            return;
+        }
+        form.submit();
+    }
+</script>
+
 <body>
 <%@include file="header.jsp"%>
 
@@ -34,7 +51,7 @@
                         <h6>Sign into your account</h6>
                     </div>
                     <div class="m-b-20">
-                        <form action="loginOK.jsp" method="post">
+                        <form name="loginForm" action="loginOK.jsp" method="post">
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="ID" name="userid">
                             </div>
@@ -42,7 +59,7 @@
                                 <input class="form-control" type="password" placeholder="Pasword" name="password">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-block btn-round btn-brand" type="submit">Login</button>
+                                <button class="btn btn-block btn-round btn-brand" type="submit" onClick="checkLogin()">Login</button>
                             </div>
                         </form>
                     </div>
