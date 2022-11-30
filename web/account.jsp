@@ -82,15 +82,6 @@
                             <p><%=account.getBank()%></p>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <select class="form-control">
-                                    <option selected="selected">전체</option>
-                                    <option>입금</option>
-                                    <option>출금</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
                             <div class="form-group col-md-6"><a class="btn btn-block btn-light">채우기</a></div>
                             <div class="form-group col-md-6"><a class="btn btn-block btn-dark" href="#">보내기</a></div>
                         </div>
@@ -109,90 +100,69 @@
                     <form method="post">
                         <div class="table-responsive">
                             <table class="table cart-table">
-                                <thead>
-                                <tr>
-                                    <th class="col-thumbnail">Product</th>
-                                </tr>
-                                </thead>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <select class="form-control">
+                                            <option selected="selected">전체</option>
+                                            <option>입금</option>
+                                            <option>출금</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <tbody>
+                                <tr>
+                                    <th class="col-thumbnail">11월 27일</th>
+                                </tr>
                                 <tr>
                                     <td><a href="#"><img class="cart-thumbnail" src="assets/images/shop/1.jpg" alt=""></a></td>
                                     <td>
-                                        <h6 class="m-b-0"><a href="#">Classic Chair</a></h6>
-                                        <p><small>Color: black | Size: 36.5</small></p>
+                                        <h6 class="m-b-0"><a href="#">노시은</a></h6>
+                                        <p><small>20:29</small></p>
                                     </td>
-                                    <td>$30.00
+                                    <td>4400 원
                                     </td>
-                                    <td>
-                                        <input class="form-control" type="number" step="1" min="1" value="1">
-                                    </td>
-                                    <td>$30.00
+                                    <td>207,640 원
                                     </td>
                                     <td class="cart-remove"><a href="#"><i class="ti-close"></i></a></td>
+                                </tr>
+
+                                <tr>
+                                    <th class="col-thumbnail">11월 26일</th>
                                 </tr>
                                 <tr>
                                     <td><a href="#"><img class="cart-thumbnail" src="assets/images/shop/5.jpg" alt=""></a></td>
                                     <td>
-                                        <h6 class="m-b-0"><a href="#">Solo Headphones</a></h6>
-                                        <p><small>Color: black | Size: 36.5</small></p>
+                                        <h6 class="m-b-0"><a href="#">김민정</a></h6>
+                                        <p><small>23:34</small></p>
                                     </td>
-                                    <td>$20.00
+                                    <td>-24,800 원
                                     </td>
-                                    <td>
-                                        <input class="form-control" type="number" step="1" min="1" value="1">
-                                    </td>
-                                    <td>$20.00
+                                    <td>198,240 원
                                     </td>
                                     <td class="cart-remove"><a href="#"><i class="ti-close"></i></a></td>
+                                </tr>
+
+                                <tr>
+                                    <th class="col-thumbnail">11월 25일</th>
                                 </tr>
                                 <tr>
                                     <td><a href="#"><img class="cart-thumbnail" src="assets/images/shop/3.jpg" alt=""></a></td>
                                     <td>
-                                        <h6 class="m-b-0"><a href="#">Folder Calendar</a></h6>
-                                        <p><small>Color: black | Size: 36.5</small></p>
+                                        <h6 class="m-b-0"><a href="#">토뱅김도희</a></h6>
+                                        <p><small>22:53</small></p>
                                     </td>
-                                    <td>$10.00
+                                    <td>-40,000 원
                                     </td>
-                                    <td>
-                                        <input class="form-control" type="number" step="1" min="1" value="1">
-                                    </td>
-                                    <td>$10.00
+                                    <td>323,040 원
                                     </td>
                                     <td class="cart-remove"><a href="#"><i class="ti-close"></i></a></td>
                                 </tr>
+
                                 </tbody>
                             </table>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <input class="form-control" type="text" placeholder="Coupon Code">
-                            </div>
-                            <div class="form-group col-md-4"><a class="btn btn-block-mobile btn-outline-brand" href="#">Apply Coupon</a></div>
-                            <div class="form-group col-md-4 text-right"><a class="btn btn-block-mobile btn-brand" href="#">Update Cart</a></div>
-                        </div>
                         <hr class="m-t-0">
                     </form>
-                </div>
-            </div>
-            <div class="row m-t-70">
-                <div class="col-md-12">
-                    <table class="table cart-table">
-                        <tbody>
-                        <tr>
-                            <td>Subtotal</td>
-                            <td class="text-right">$21.00</td>
-                        </tr>
-                        <tr>
-                            <td>Discount</td>
-                            <td class="text-right">$1.00</td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td class="text-right">$20.00</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="text-right"><a class="btn btn-block-mobile btn-black" href="#">Proceed to checkout</a></div>
                 </div>
             </div>
         </div>
