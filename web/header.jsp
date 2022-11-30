@@ -64,7 +64,7 @@
                     </li>
                     <li class="menu-item-has-children"><a href="consume.jsp"><span class="menu-item-span">소비</span></a>
                     </li>
-                    <li class="menu-item-has-children"><a href="hobby.jsp"><span class="menu-item-span">습관</span></a>
+                    <li class="menu-item-has-children"><a href="hobbys.jsp"><span class="menu-item-span">습관</span></a>
                     </li>
 
                     <li class="menu-item-has-children"><a href="shop.jsp"><span class="menu-item-span">상점</span></a>
