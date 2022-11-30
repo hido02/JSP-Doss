@@ -51,7 +51,7 @@
                 <div class="col-md-12">
                     <div class="accordion-item">
                         <div class="accordion-item-header">
-                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비<br><%=consumeSum%> 원</a></h6>
+                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비 <br><%=consumeSum%> 원</a></h6>
                         </div>
                     </div>
                     <p>
@@ -59,7 +59,7 @@
                                     <div class="accordion accordion-brand" id="accordion2">
                                         <div class="accordion-item">
                                             <div class="accordion-item-header">
-                                                <h6><a class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5">(쇼핑)에 제일 많이 썻어요</a></h6>
+                                                <h6><a class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5">(식비)에 제일 많이 썻어요</a></h6>
                                             </div>
                                             <div class="collapse" id="collapse-5" data-parent="#accordion2">
                                                 <div class="accordion-item-body">
@@ -79,16 +79,6 @@
         </div>
     </section>
     <!-- Hero end-->
-
-<%--    <%--%>
-<%--        // consumeDetail 퍼센트 구하는 로직--%>
-<%--        String[] detail = new String[10];--%>
-<%--        for(int i = 0; i < listOfAccounts.size(); i++) {--%>
-<%--            Account account = listOfAccounts.get(i);--%>
-<%--            detail[i] = account.getConsumeDetail();--%>
-<%--        }--%>
-
-<%--    %>--%>
 
     <!-- Progress Bars-->
     <section class="module divider-top">
@@ -201,13 +191,12 @@
                     <div class="pricing-header">
                         <div class="pricing-icon"><img src="assets/images/card/<%=account.getFilename()%>"></div>
 <%--                        <div class="pricing-icon"><i class="ti-slice"></i></div>--%>
-                        <div class="pricing-title">Starter</div>
                     </div>
                     <h1><b><%=account.getAccountName()%>></b>
                     </h1>
                     <div class="pricing-body">
                         <p>
-<%--                            <%=account.getConsume()%> 원--%>
+                            <%=account.getConsume()%> 원
                         </p>
                     </div>
                     <div class="pricing-footer"><a class="btn btn-circle btn-brand" href="#">Download</a></div>
