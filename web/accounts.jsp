@@ -123,7 +123,7 @@
                                                         <input class="form-control" type="text" placeholder="현재 잔액" name="balance">
                                                     </div>
                                                     <div class="col-md-12 form-group">
-                                                        <input class="form-control" type="text" placeholder="카드 사진" name="filename" type="file">
+                                                        <input class="form-control" type="file" placeholder="카드 사진" name="filename" type="file">
                                                     </div>
                                                 </div>
                                             </form>
