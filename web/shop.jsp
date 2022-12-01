@@ -2,10 +2,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="dao.AccountRepository" %>
-<%@ page import="dao.ConsumeRepository" %>
-<%@ page import="dto.Account" %>
-<%@ page import="dto.Consume" %>
+<%@ page import="main.java.dao.ShopRepository" %>
+<%@ page import="main.java.dto.Shop" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +16,10 @@
 
 <body>
 <%@include file="header.jsp"%>
+<%
+    ShopRepository shopDAO = ShopRepository.getInstance();
+    ArrayList<Shop> listOfShops = shopDAO.getAllShops();
+%>
 
 <!-- Wrapper-->
 <div class="wrapper">
@@ -38,86 +40,24 @@
     <section class="module">
         <div class="container">
             <div class="row">
+                <%
+                    for(int i = 0; i < listOfShops.size(); i++) {
+                        Shop shop = listOfShops.get(i);
+//                    }
+                %>
                 <div class="col-md-3">
                     <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/1.jpg" alt=""></a>
+                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/<%=shop.getFilename()%>" alt=""></a>
                             <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
                         </div>
                         <div class="shop-item-captions">
-                            <h6 class="shop-item-title">역전우동</h6><span class="shop-item-price">$20.00</span>
+                            <h6 class="shop-item-title"><%=shop.getShopName()%></h6><span class="shop-item-price"><%=shop.getPoint()%> 원</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/2.jpg" alt=""></a>
-                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
-                        </div>
-                        <div class="shop-item-captions">
-                            <h6 class="shop-item-title">스타벅스 코리아</h6><span class="shop-item-price">$30.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/3.jpg" alt=""></a>
-                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
-                        </div>
-                        <div class="shop-item-captions">
-                            <h6 class="shop-item-title">롯데월드</h6><span class="shop-item-price">$50.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/4.jpg" alt=""></a>
-                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
-                        </div>
-                        <div class="shop-item-captions">
-                            <h6 class="shop-item-title">상상기업</h6><span class="shop-item-price">$80.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/5.jpg" alt=""></a>
-                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
-                        </div>
-                        <div class="shop-item-captions">
-                            <h6 class="shop-item-title">맘스터치</h6><span class="shop-item-price">$100.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/6.jpg" alt=""></a>
-                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
-                        </div>
-                        <div class="shop-item-captions">
-                            <h6 class="shop-item-title">서브웨이</h6><span class="shop-item-price">$20.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/7.jpg" alt=""></a>
-                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
-                        </div>
-                        <div class="shop-item-captions">
-                            <h6 class="shop-item-title">쇼미더머니</h6><span class="shop-item-price">$40.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="shop-grid-item">
-                        <div class="shop-item-thumb"><a href="#"><img src="assets/images/shop/8.jpg" alt=""></a>
-                            <div class="shop-item-hidden"><a class="btn btn-new-white" href="#">Add to cart</a></div>
-                        </div>
-                        <div class="shop-item-captions">
-                            <h6 class="shop-item-title">고등래퍼</h6><span class="shop-item-price">$40.00</span>
-                        </div>
-                    </div>
-                </div>
+                <%
+                    }
+                %>
             </div>
 
             <div class="row">
@@ -145,6 +85,24 @@
         </div>
     </section>
     <!-- Shop Grid-->
+
+    <!-- Counters-->
+    <section class="module divider-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <div class="counter">
+                    <div class="counter-icon"><span class="icon-fire icons"></span></div>
+                    <div class="counter-number">
+                        <h6><strong class="counter-timer" data-from="0" data-to="3128">0</strong></h6>
+                    </div>
+                    <div class="counter-title">Awards Won</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counters end-->
 
 </div>
 </section>
