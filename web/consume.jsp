@@ -2,10 +2,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="dao.AccountRepository" %>
-<%@ page import="dao.ConsumeRepository" %>
-<%@ page import="dto.Account" %>
-<%@ page import="dto.Consume" %>
+<%@ page import="main.java.dao.AccountRepository" %>
+<%@ page import="main.java.dao.ConsumeRepository" %>
+<%@ page import="main.java.dto.Account" %>
+<%@ page import="main.java.dto.Consume" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +51,7 @@
                 <div class="col-md-12">
                     <div class="accordion-item">
                         <div class="accordion-item-header">
-                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비 <br><%=consumeSum%> 원</a></h6>
+                            <h6><a class="accordion-link collapsed" href="#progress">11월 소비 <br><strong><%=consumeSum%></strong> 원</a></h6>
                         </div>
                     </div>
                     <p>
@@ -59,12 +59,12 @@
                                     <div class="accordion accordion-brand" id="accordion2">
                                         <div class="accordion-item">
                                             <div class="accordion-item-header">
-                                                <h6><a class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5">(식비)에 제일 많이 썻어요</a></h6>
+                                                <h6><a class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5"><strong>식비</strong>에 제일 많이 썻어요</a></h6>
                                             </div>
                                             <div class="collapse" id="collapse-5" data-parent="#accordion2">
                                                 <div class="accordion-item-body">
                                                     <p>
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                                                        그만 좀 먹어
                                                     </p>
                                                 </div>
                                             </div>
@@ -196,10 +196,10 @@
                     </h1>
                     <div class="pricing-body">
                         <p>
-                            <%=account.getConsume()%> 원
+                            -<%=account.getConsume()%> 원
                         </p>
                     </div>
-                    <div class="pricing-footer"><a class="btn btn-circle btn-brand" href="#">Download</a></div>
+                    <div class="pricing-footer"><a class="btn btn-circle btn-brand" href="./account.jsp?id=<%=account.getAccountId()%>">자세히</a></div>
                 </div>
                 <%
                     }

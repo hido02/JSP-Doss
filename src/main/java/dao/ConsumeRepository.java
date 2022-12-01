@@ -1,6 +1,6 @@
-package handler.dao;
+package main.java.dao;
 
-import dto.Consume;
+import main.java.dto.Consume;
 
 import java.util.ArrayList;
 
@@ -15,6 +15,7 @@ public class ConsumeRepository {
         c1.setConsume(5900);
         c1.setConsumeDetail("스타벅스 코리아");
         c1.setFilename("dosscard_blackpink.jpg");
+        c1.setAccountNumber((int) 3024915732711L);
 
         Consume c2 = new Consume("2", "도카");
         c2.setConsume(10000);
