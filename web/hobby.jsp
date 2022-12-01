@@ -2,12 +2,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="dao.AccountRepository" %>
-<%@ page import="dao.ConsumeRepository" %>
-<%@ page import="dto.Account" %>
-<%@ page import="dto.Consume" %>
-<%@ page import="dao.HobbyRepository" %>
-<%@ page import="dto.Hobby" %>
+<%@ page import="main.java.dao.AccountRepository" %>
+<%@ page import="main.java.dao.ConsumeRepository" %>
+<%@ page import="main.java.dto.Account" %>
+<%@ page import="main.java.dto.Consume" %>
+<%@ page import="main.java.dao.HobbyRepository" %>
+<%@ page import="main.java.dto.Hobby" %>
 <!DOCTYPE html>
 <html>
 <head>
