@@ -2,8 +2,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="dao.AccountRepository" %>
-<%@ page import="dto.Account" %>
+<%@ page import="main.java.dao.AccountRepository" %>
+<%@ page import="main.java.dto.Account" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,7 +115,7 @@
                                                         <input class="form-control" type="text" placeholder="계좌이름" name="accountName">
                                                     </div>
                                                     <div class="col-md-6 form-group">
-                                                        <input class="form-control" type="text" placeholder="은행" name="balance">
+                                                        <input class="form-control" type="text" placeholder="은행" name="bank">
                                                     </div>
                                                 </div>
                                                 <div class="row form-row">

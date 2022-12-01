@@ -2,9 +2,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="dao.AccountRepository" %>
-<%@ page import="dto.Account" %>
-<jsp:useBean id="accountDAO" class="dao.AccountRepository" scope="session"/>
+<%@ page import="main.java.dao.AccountRepository" %>
+<%@ page import="main.java.dto.Account" %>
+<jsp:useBean id="accountDAO" class="main.java.dao.AccountRepository" scope="session"/>
 
 <!DOCTYPE html>
 <head>

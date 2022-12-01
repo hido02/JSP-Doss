@@ -1,6 +1,6 @@
-package handler.dao;
+package main.java.dao;
 
-import dto.Account;
+import main.java.dto.Account;
 
 import java.util.ArrayList;
 
@@ -16,20 +16,20 @@ public class AccountRepository {
         Account a1 = new Account("1", "도스카드 블랙핑크", 4105);
         a1.setBank("도스");
         a1.setFilename("dosscard_blackpink.jpg");
+        a1.setAccountNumber((int) 3024915732711L);
         a1.setConsume(5900);
-        a1.setConsumeDetail("스타벅스 코리아");
 
         Account a2 = new Account("2", "도카", 491040);
         a2.setBank("NH농협은행");
         a2.setFilename("nhcard.png");
+        a2.setAccountNumber((int) 100040134971L);
         a2.setConsume(10000);
-        a2.setConsumeDetail("카카오페이");
 
         Account a3 = new Account("3", "저금통", 0);
         a3.setBank("저금통");
         a3.setFilename("piggybank.jfif");
+        a3.setAccountNumber(0);
         a3.setConsume(5900);
-        a3.setConsumeDetail("이체");
 
         listOfAccounts.add(a1);
         listOfAccounts.add(a2);
