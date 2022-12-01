@@ -48,6 +48,14 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 m-auto">
                     <div class="m-b-20">
+                        <%
+                            String error = request.getParameter("error");
+                            if (error != null) {
+                                out.println("<div class='alert alert-warning'>");
+                                out.println("아이디와 비밀번호를 확인해주세요");
+                                out.println("</div>");
+                            }
+                        %>
                         <h6>Sign into your account</h6>
                     </div>
                     <div class="m-b-20">
