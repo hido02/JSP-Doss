@@ -1,6 +1,9 @@
 <%--C:\theme-boomerang-master\theme-boomerang-master\about-1.html--%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value='<%=request.getParameter("language")%>'/>
+<fmt:bundle basename="bundle.message"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,16 +26,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-white">Doss</h1>
-                    <p class="text-white">금융의 모든 것 도스에서 쉽고 간편하게</p>
+                    <p class="text-white"><fmt:message key="intro"/>금융의 모든 것 도스에서 쉽고 간편하게</p>
                     <p><a class="btn btn-lg btn-circle btn-brand" href="#">App Store</a><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Google Play</a></p>
-                    <p>
-                        <!-- Buttons-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="demo-btn">
-                                        <a class="btn btn-circle btn-success" href="#"><span class="btn-icon-left far fa-gem"></span> 한글</a><a class="btn btn-circle btn-danger" href="index_en.jsp"><span class="btn-icon-left far fa-gem"></span> English</a>
-                    <!-- Buttons end-->
-                    </p>
                 </div>
             </div>
         </div>
@@ -47,14 +42,14 @@
                     <p class="m-b-30"><img src="assets/images/main/about-4.jpg" alt=""></p>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
-                    <h2>기본에 충실. 내 돈 관리, 야무지게</h2>
-                    <p class="lead">모든 금융 내역을 한 눈에 조회하고 한 곳에서 관리하세요.</p>
+                    <h2><fmt:message key="intro2_1" />기본에 충실. 내 돈 관리, 야무지게</h2>
+                    <p class="lead"><fmt:message key="intro2_2" /> 모든 금융 내역을 한 눈에 조회하고 한 곳에서 관리하세요.</p>
                     <ul class="arrow-list">
-                        <li>계좌별 잔액 확인</li>
-                        <li>송금</li>
-                        <li>이번 달 소비 분석 리포트</li>
-                        <li>습관 만들기</li>
-                        <li>상점 방문 시 포인트 지급</li>
+                        <li><fmt:message key="intro2_3" />계좌별 잔액 확인</li>
+                        <li><fmt:message key="intro2_4" />송금</li>
+                        <li><fmt:message key="intro2_5" />이번 달 소비 분석 리포트</li>
+                        <li><fmt:message key="intro2_6" />습관 만들기</li>
+                        <li><fmt:message key="intro2_7" />상점 방문 시 포인트 지급</li>
                     </ul>
                 </div>
             </div>
@@ -144,7 +139,7 @@
                         <div class="counter-number">
                             <h6><strong class="counter-timer" data-from="0" data-to="1538">0</strong></h6>
                         </div>
-                        <div class="counter-title">행복한 사용자들</div>
+                        <div class="counter-title">Happy Clients</div>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -152,7 +147,7 @@
                         <div class="counter-number">
                             <h6><strong class="counter-timer" data-from="0" data-to="2124">0</strong></h6>
                         </div>
-                        <div class="counter-title">투자 금액</div>
+                        <div class="counter-title">Happy Clients</div>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -160,7 +155,7 @@
                         <div class="counter-number">
                             <h6><strong class="counter-timer" data-from="0" data-to="3128">0</strong></h6>
                         </div>
-                        <div class="counter-title">개발자를 사랑하는 사람들</div>
+                        <div class="counter-title">Happy Clients</div>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -168,7 +163,7 @@
                         <div class="counter-number">
                             <h6><strong class="counter-timer" data-from="0" data-to="9534">0</strong></h6>
                         </div>
-                        <div class="counter-title">통장 잔고</div>
+                        <div class="counter-title">Happy Clients</div>
                     </div>
                 </div>
             </div>
@@ -321,125 +316,125 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
-                <p class="text-center"><a class="btn btn-circle btn-outline-brand" href="#">맨 위로</a></p>
-            </div>
-        </div>
-</div>
-</section>
-<!-- Team end-->
-
-<!-- Clients-->
-<section class="module bg-gray p-b-0">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 m-auto">
-                <div class="owl-carousel clients-carousel">
-                    <div class="client"><img src="assets/images/clients/1.png" alt=""></div>
-                    <div class="client"><img src="assets/images/clients/2.png" alt=""></div>
-                    <div class="client"><img src="assets/images/clients/3.png" alt=""></div>
-                    <div class="client"><img src="assets/images/clients/4.png" alt=""></div>
-                    <div class="client"><img src="assets/images/clients/5.png" alt=""></div>
-                    <div class="client"><img src="assets/images/clients/6.png" alt=""></div>
-                    <div class="client"><img src="assets/images/clients/7.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Clients end-->
-
-<!-- Image-->
-<section class="module no-gutters p-0">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12"><img src="assets/images/module-18.jpg" alt=""></div>
-        </div>
-    </div>
-</section>
-<!-- Image end-->
-
-<!-- Footer-->
-<footer class="footer">
-    <div class="footer-widgets">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <!-- Text widget-->
-                    <aside class="widget widget-text">
-                        <div class="widget-title">
-                            <h6>About Us</h6>
-                        </div>
-                        <div class="textwidget">
-                            <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>
-                            <p>
-                                Location: 12 London Avenue, Suite 18<br>
-                                E-mail: support@theme.com<br>
-                                Phone: 8 800 123 4567<br>
-                            </p>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-md-3">
-                    <!-- Recent entries widget-->
-                    <aside class="widget widget-recent-entries">
-                        <div class="widget-title">
-                            <h6>Recent Posts</h6>
-                        </div>
-                        <ul>
-                            <li><a href="#">Map where your photos were taken and discover local points.</a><span class="post-date">May 8, 2018</span></li>
-                            <li><a href="#">Map where your photos were taken and discover local points.</a><span class="post-date">April 7, 2018</span></li>
-                            <li><a href="#">Map where your photos were taken and discover local points.</a><span class="post-date">September 7, 2018</span></li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-md-3">
-                    <!-- Twitter widget-->
-                    <aside class="widget twitter-feed-widget">
-                        <div class="widget-title">
-                            <h6>Twitter Feed</h6>
-                        </div>
-                        <div class="twitter-feed" data-twitter="double_theme" data-number="1"></div>
-                    </aside>
-                </div>
-                <div class="col-md-3">
-                    <!-- Recent works-->
-                    <aside class="widget widget-recent-works">
-                        <div class="widget-title">
-                            <h6>Portfolio</h6>
-                        </div>
-                        <ul>
-                            <li><a href="#"><img src="assets/images/widgets/1.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/2.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/3.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/7.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/8.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/6.jpg" alt=""></a></li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bar">
-        <div class="container">
-            <div class="row">
                 <div class="col-md-12">
-                    <div class="copyright">
-                        <p>© 2018 Boomerang, All Rights Reserved. Design with love by <a href="#">2theme</a></p>
+                    <p class="text-center"><a class="btn btn-circle btn-outline-brand" href="#">맨 위로</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team end-->
+
+    <!-- Clients-->
+    <section class="module bg-gray p-b-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 m-auto">
+                    <div class="owl-carousel clients-carousel">
+                        <div class="client"><img src="assets/images/clients/1.png" alt=""></div>
+                        <div class="client"><img src="assets/images/clients/2.png" alt=""></div>
+                        <div class="client"><img src="assets/images/clients/3.png" alt=""></div>
+                        <div class="client"><img src="assets/images/clients/4.png" alt=""></div>
+                        <div class="client"><img src="assets/images/clients/5.png" alt=""></div>
+                        <div class="client"><img src="assets/images/clients/6.png" alt=""></div>
+                        <div class="client"><img src="assets/images/clients/7.png" alt=""></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- Footer end-->
+    </section>
+    <!-- Clients end-->
+
+    <!-- Image-->
+    <section class="module no-gutters p-0">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12"><img src="assets/images/module-18.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <!-- Image end-->
+
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Text widget-->
+                        <aside class="widget widget-text">
+                            <div class="widget-title">
+                                <h6>About Us</h6>
+                            </div>
+                            <div class="textwidget">
+                                <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>
+                                <p>
+                                    Location: 12 London Avenue, Suite 18<br>
+                                    E-mail: support@theme.com<br>
+                                    Phone: 8 800 123 4567<br>
+                                </p>
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Recent entries widget-->
+                        <aside class="widget widget-recent-entries">
+                            <div class="widget-title">
+                                <h6>Recent Posts</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#">Map where your photos were taken and discover local points.</a><span class="post-date">May 8, 2018</span></li>
+                                <li><a href="#">Map where your photos were taken and discover local points.</a><span class="post-date">April 7, 2018</span></li>
+                                <li><a href="#">Map where your photos were taken and discover local points.</a><span class="post-date">September 7, 2018</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Twitter widget-->
+                        <aside class="widget twitter-feed-widget">
+                            <div class="widget-title">
+                                <h6>Twitter Feed</h6>
+                            </div>
+                            <div class="twitter-feed" data-twitter="double_theme" data-number="1"></div>
+                        </aside>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Recent works-->
+                        <aside class="widget widget-recent-works">
+                            <div class="widget-title">
+                                <h6>Portfolio</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#"><img src="assets/images/widgets/1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/images/widgets/2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/images/widgets/3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/images/widgets/7.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/images/widgets/8.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/images/widgets/6.jpg" alt=""></a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>© 2018 Boomerang, All Rights Reserved. Design with love by <a href="#">2theme</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end-->
 </div>
 <!-- Wrapper end-->
 <!-- Off canvas-->
