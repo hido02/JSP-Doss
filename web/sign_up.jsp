@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +44,7 @@
                         <h6>Create a new account</h6>
                     </div>
                     <div class="m-b-20">
-                        <form method="post">
+                        <form action="method="post">
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="Name">
                             </div>

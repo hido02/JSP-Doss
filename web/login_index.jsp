@@ -1,19 +1,100 @@
 <%--C:\theme-boomerang-master\theme-boomerang-master\about-1.html--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: user
+  Date: 2022-11-20
+  Time: 오전 2:19
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Boomerang - Template</title>
-</head>
+<%
+    String user = (String) session.getAttribute("userid");
+%>
+<!-- Favicons-->
+<link rel="shortcut icon" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="assets/images/grabbing.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+<!-- Web Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- Plugins-->
+<link href="assets/css/plugins.min.css" rel="stylesheet">
+<!-- Template core CSS-->
+<link href="assets/css/template.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+
+<%
+    request.setCharacterEncoding("UTF-8");
+    String userid = request.getParameter("userid");
+    String password = request.getParameter("password");
+%>
+
+<!-- Preloader-->
+<div class="page-loader">
+    <div class="page-loader-inner">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+</div>
+<!-- Preloader end-->
+<script>
+    var it = $('#extra-nav');
+    var user = <%=user%>;
+    if (user == null) {
+        var text = '<li><a class="top-bar-cart" href="login.jsp"><span class="menu-item-span"><i class="bi bi-emoji-dizzy"></i><span>LOGIN</span></span></a></li>';
+    }
+    else {
+        var text = <li><%=user%>님<a href="logout.jsp">로그아웃</a></li>
+    }
+    it.append(text);
+
+</script>
 
 <body>
 
-<%@include file="header.jsp"%>
+<!-- Header-->
+<header class="header header-transparent">
+    <div class="container-fluid">
+        <!-- Brand-->
+        <div class="inner-header"><a class="inner-brand" href="index.jsp">Doss</a></div>
+        <!-- Navigation-->
+        <div class="inner-navigation collapse">
+            <div class="inner-nav">
+                <ul>
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="index.jsp"><span class="menu-item-span">Home</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="accounts.jsp"><span class="menu-item-span">계좌</span></a>
+                    </li>
+                    <li class="menu-item-has-children"><a href="consume.jsp"><span class="menu-item-span">소비</span></a>
+                    </li>
+                    <li class="menu-item-has-children"><a href="hobbys.jsp"><span class="menu-item-span">습관</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children"><a href="shop.jsp"><span class="menu-item-span">상점</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#"><span class="menu-item-span">인사</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="extra-nav">
+            <ul>
+                <li><a class="top-bar-cart" href="logout.jsp"><span class="menu-item-span"><b><%=userid%>님</b></span></a></li>
+                <li><a class="top-bar-cart" href="logout.jsp"><span class="menu-item-span"><i class="bi-arrow-right-circle fs-5"></i></span></a></li>
+                <li><a class="off-canvas-open" href="#"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+                <li class="nav-toggle"><a href="#" data-toggle="collapse" data-target=".inner-navigation"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Header end-->
 
 <!-- Wrapper-->
 <div class="wrapper">
@@ -27,15 +108,15 @@
                     <p><a class="btn btn-lg btn-circle btn-brand" href="#">App Store</a><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Google Play</a></p>
                     <p>
                         <!-- Buttons-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="demo-btn">
-                                        <a class="btn btn-circle btn-success" href="#"><span class="btn-icon-left far fa-gem"></span> 한글</a><a class="btn btn-circle btn-danger" href="index_en.jsp"><span class="btn-icon-left far fa-gem"></span> English</a>
-                    <!-- Buttons end-->
-                    </p>
-                </div>
-            </div>
-        </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="demo-btn">
+                                <a class="btn btn-circle btn-success" href="#"><span class="btn-icon-left far fa-gem"></span> 한글</a><a class="btn btn-circle btn-danger" href="index_en.jsp"><span class="btn-icon-left far fa-gem"></span> English</a>
+                                <!-- Buttons end-->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
     </section>
     <!-- Hero end-->
 
@@ -192,21 +273,10 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    <p><img class="img-shadow" src="assets/images/main/nodongyo.PNG" alt=""></p>
+                    <p><img class="img-shadow" src="assets/images/main/about-1.jpg" alt=""></p>
                 </div>
                 <div class="col-md-4">
-                    <p><img class="img-shadow" src="assets/images/main/coomon.PNG" alt=""></p>
-                </div>
-                <div class="row">
-                <div class="col-md-4">
-                    <p><img class="img-shadow" src="assets/images/main/son.PNG" alt=""></p>
-                </div>
-                <div class="col-md-4">
-                    <p><img class="img-shadow" src="assets/images/main/hiro.PNG" alt=""></p>
-                </div>
-                    <div class="col-md-4">
-                        <p><img class="img-shadow" src="assets/images/main/rei.PNG" alt=""></p>
-                    </div>
+                    <p><img class="img-shadow" src="assets/images/main/about-2.jpg" alt=""></p>
                 </div>
             </div>
             <div class="row">
@@ -256,44 +326,32 @@
                 <div class="col-md-12">
                     <div class="review-slides owl-carousel">
                         <div class="review">
-                            <div class="review-icons"><img src="assets/images/main/alien.PNG" alt="">
+                            <div class="review-icons"><img src="assets/images/avatar/1.jpg" alt="">
                             </div>
                             <div class="review-content">
                                 <blockquote>
-                                    <p>지구에 툭 떨어진 I'm an alien on this earth
-                                        나 홀로 어디에도 속하지 않아 보이고
-                                        아무리 웃어봐도 I feel so lonely
-                                        지구인과 섞이려고 드는 외계인
-                                        소리 내 말을 해봐도 누구도 듣질 않아</p>
-                                    <footer class="blockquote-footer">Stray Kids HAN</footer>
+                                    <p>I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.</p>
+                                    <footer class="blockquote-footer">Albert Einstein</footer>
                                 </blockquote>
                             </div>
                         </div>
                         <div class="review">
-                            <div class="review-icons"><img src="assets/images/main/alien.PNG" alt="">
+                            <div class="review-icons"><img src="assets/images/avatar/1.jpg" alt="">
                             </div>
                             <div class="review-content">
                                 <blockquote>
-                                    <p>지구에 툭 떨어진 I'm an alien on this earth
-                                        나 홀로 어디에도 속하지 않아 보이고
-                                        아무리 웃어봐도 I feel so lonely
-                                        지구인과 섞이려고 드는 외계인
-                                        소리 내 말을 해봐도 누구도 듣질 않아</p>
-                                    <footer class="blockquote-footer">Stray Kids HAN</footer>
+                                    <p>To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.</p>
+                                    <footer class="blockquote-footer">Ralph Waldo Emerson</footer>
                                 </blockquote>
                             </div>
                         </div>
                         <div class="review">
-                            <div class="review-icons"><img src="assets/images/main/alien.PNG" alt="">
+                            <div class="review-icons"><img src="assets/images/avatar/1.jpg" alt="">
                             </div>
                             <div class="review-content">
                                 <blockquote>
-                                    <p>지구에 툭 떨어진 I'm an alien on this earth
-                                        나 홀로 어디에도 속하지 않아 보이고
-                                        아무리 웃어봐도 I feel so lonely
-                                        지구인과 섞이려고 드는 외계인
-                                        소리 내 말을 해봐도 누구도 듣질 않아</p>
-                                    <footer class="blockquote-footer">Stray Kids HAN</footer>
+                                    <p>Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.</p>
+                                    <footer class="blockquote-footer">Marilyn Monroe</footer>
                                 </blockquote>
                             </div>
                         </div>
@@ -314,7 +372,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-9 m-auto text-center">
-                    <h1>개발: 김도희<br>기획: 히도김 </h1>
+                    <h1>개발: 김도희<br>기획: 김도희 </h1>
                     <p class="lead">See how your users experience your website in realtime or view trends to see any changes in performance over time.</p>
                 </div>
             </div>
@@ -324,7 +382,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 col-md-9 m-auto text-center">
+                <div class="col-lg-4 col-md-6">
                     <div class="team-item">
                         <div class="team-image"><img src="assets/images/developer/hido.jpg" alt="">
                             <div class="team-wrap">

@@ -13,35 +13,35 @@ public class ShopRepository {
     public ShopRepository() {
         Shop s1 = new Shop("1", "역전우동");
         s1.setPoint(20);
-        s1.setFilename("역전우동.png");
+        s1.setFilename("yeokjeon.PNG");
 
         Shop s2 = new Shop("2", "스타벅스 코리아");
         s1.setPoint(30);
-        s1.setFilename("스타벅스.png");
+        s1.setFilename("starbucks.PNG");
 
         Shop s3 = new Shop("3", "롯데월드");
         s1.setPoint(50);
-        s1.setFilename("롯데월드.jpg");
+        s1.setFilename("lotteworld.PNG");
 
         Shop s4 = new Shop("4", "상상기업");
         s1.setPoint(80);
-        s1.setFilename("상상기업.jfif");
+        s1.setFilename("avocado.PNG");
 
         Shop s5 = new Shop("5", "맘스터치");
         s1.setPoint(100);
-        s1.setFilename("맘스터치.png");
+        s1.setFilename("momstouch.PNG");
 
         Shop s6 = new Shop("6", "서브웨이");
         s1.setPoint(20);
-        s1.setFilename("서브웨이.jpg");
+        s1.setFilename("subway.PNG");
 
         Shop s7 = new Shop("7", "쇼미더머니");
         s1.setPoint(777);
-        s1.setFilename("쇼미.PNG");
+        s1.setFilename("showme.PNG");
 
         Shop s8 = new Shop("8", "고등래퍼");
         s1.setPoint(404);
-        s1.setFilename("고등래퍼.jfif");
+        s1.setFilename("gorap.PNG");
 
         listOfShops.add(s1);
         listOfShops.add(s2);

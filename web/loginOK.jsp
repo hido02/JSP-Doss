@@ -19,23 +19,53 @@
     <link href="assets/css/plugins.min.css" rel="stylesheet">
     <!-- Template core CSS-->
     <link href="assets/css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 </head>
 
 <%
     request.setCharacterEncoding("UTF-8");
     String userid = request.getParameter("userid");
     String password = request.getParameter("password");
-
-    if(userid != null && userid.equals(password)) {
-        // 로그인 성공 -> userid를 세션 변수에 저장
-        session.setAttribute("userid", userid);
-    }
-    // index.jsp로 보냄
-    response.sendRedirect("index.jsp");
 %>
 
 <body>
-<%@include file="header.jsp"%>
+<!-- Header-->
+<header class="header header-transparent">
+    <div class="container-fluid">
+        <!-- Brand-->
+        <div class="inner-header"><a class="inner-brand" href="login_index.jsp?userid=<%=userid%>">Doss</a></div>
+        <!-- Navigation-->
+        <div class="inner-navigation collapse">
+            <div class="inner-nav">
+                <ul>
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="index.jsp"><span class="menu-item-span">Home</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="accounts.jsp"><span class="menu-item-span">계좌</span></a>
+                    </li>
+                    <li class="menu-item-has-children"><a href="consume.jsp"><span class="menu-item-span">소비</span></a>
+                    </li>
+                    <li class="menu-item-has-children"><a href="hobbys.jsp"><span class="menu-item-span">습관</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children"><a href="shop.jsp"><span class="menu-item-span">상점</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#"><span class="menu-item-span">인사</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="extra-nav">
+            <ul>
+                <li><a class="top-bar-cart" href="logout.jsp"><span class="menu-item-span"><i class="bi-arrow-right-circle fs-5"></i></span></a></li>
+                <li><a class="off-canvas-open" href="#"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+                <li class="nav-toggle"><a href="#" data-toggle="collapse" data-target=".inner-navigation"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Header end-->
 
 <!-- Wrapper-->
 <div class="wrapper">

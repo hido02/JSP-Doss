@@ -70,7 +70,7 @@
                         <div class="feature-thumb"><img src="assets/images/card/<%=account.getFilename()%>" alt=""></div>
                         <div class="feature-content">
                             <h6><%=account.getAccountName()%>></h6>
-                            <p><%=account.getBalance()%>원</p>
+                            <p><%=account.getBalance()%> 원</p>
                             <p><%=account.getBank()%></p>
                             <a class="feature-link" href="./account.jsp?id=<%=account.getAccountId()%>">자세히</a>
                         </div>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-                            <button class="btn btn-primary" type="button">Save changes</button>
+                            <button class="btn btn-primary" type="button" href="addCard.jsp">Save changes</button>
                         </div>
                     </div>
                 </div>

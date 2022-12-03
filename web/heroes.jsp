@@ -74,7 +74,7 @@
     <link href="heroes.css" rel="stylesheet">
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="header1.jsp"%>
 <main>
     <h1 class="visually-hidden">Heroes examples</h1>
 

@@ -63,7 +63,7 @@
                 <div class="col-lg-4 col-md-6">
                     '                    <div class="team-item">
                     <%--                        <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
-                    <div class="team-image"><img src="assets/images/team/1.jpg" alt="">
+                    <div class="team-image"><img src="assets/images/hobby/elmoshop.PNG" alt="">
                         <div class="team-wrap">
                             <div class="team-content">
                                 <h6 class="team-name"><%=hobby.getHobbyName()%></h6>
@@ -94,7 +94,7 @@
                 <div class="col-lg-4 col-md-6">
                     '                    <div class="team-item">
                     <%--                    <div class="team-image"><img src="assets/images/hobby/<%=hobby.getFilename()%>" alt="">--%>
-                    <div class="team-image"><img src="assets/images/team/2.jpg" alt="">
+                    <div class="team-image"><img src="assets/images/hobby/elmorainbow.PNG" alt="">
                         <div class="team-wrap">
                             <div class="team-content">
                                 <h6 class="team-name"><%=hobby.getHobbyName()%></h6>

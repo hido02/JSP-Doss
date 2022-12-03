@@ -67,7 +67,7 @@
                     <li class="menu-item-has-children"><a href="hobbys.jsp"><span class="menu-item-span">습관</span></a>
                     </li>
 
-                    <li class="menu-item-has-children"><a href="shop.jsp"><span class="menu-item-span">상점</span></a>
+                    <li class="menu-item-has-children"><a href="shopshop.jsp"><span class="menu-item-span">상점</span></a>
                     </li>
 
                     <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#"><span class="menu-item-span">인사</span></a>
@@ -76,16 +76,6 @@
                 </ul>
             </div>
         </div>
-<%--        <%--%>
-<%--            if(session.getAttribute("userid") == null) {--%>
-<%--                out.println("<a href='login.jsp'>로그인</a>");--%>
-<%--            }--%>
-<%--            else {--%>
-<%--                String userid = (String)session.getAttribute("userid");--%>
-<%--                out.println(userid+"님 반갑습니다.<br>");--%>
-<%--                out.println("<a href='logout.jsp'>로그아웃</a>");--%>
-<%--            }--%>
-<%--        %>--%>
         <div class="extra-nav">
             <ul>
                 <li><a class="top-bar-cart" href="login.jsp"><span class="menu-item-span"><i class="bi bi-emoji-dizzy"></i></span></a></li>
@@ -96,3 +86,4 @@
     </div>
 </header>
 <!-- Header end-->
+

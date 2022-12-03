@@ -1,171 +1,259 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: user
+  Date: 2022-11-20
+  Time: 오전 2:19
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Tyhornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>Headers · Bootstrap v5.2</title>
+<%
+    String user = (String) session.getAttribute("userid");
+%>
+<!-- Favicons-->
+<link rel="shortcut icon" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="assets/images/grabbing.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+<!-- Web Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- Plugins-->
+<link href="assets/css/plugins.min.css" rel="stylesheet">
+<!-- Template core CSS-->
+<link href="assets/css/template.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
-
-
-
-
-
-    <link href="assets(download)/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-    </style>
-
-
-    <!-- Custom styles for this template -->
-    <link href="headers.css" rel="stylesheet">
-</head>
 <body>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="bootstrap" viewBox="0 0 118 94">
-        <title>Bootstrap</title>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
-    </symbol>
-    <symbol id="home" viewBox="0 0 16 16">
-        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-    </symbol>
-    <symbol id="speedometer2" viewBox="0 0 16 16">
-        <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
-        <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
-    </symbol>
-    <symbol id="table" viewBox="0 0 16 16">
-        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
-    </symbol>
-    <symbol id="people-circle" viewBox="0 0 16 16">
-        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-    </symbol>
-    <symbol id="grid" viewBox="0 0 16 16">
-        <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-    </symbol>
-</svg>
+<!-- Preloader-->
+<div class="page-loader">
+    <div class="page-loader-inner">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+</div>
+<!-- Preloader end-->
+<script>
+    var it = $('#extra-nav');
+    var user = <%=user%>;
+    if (user == null) {
+        var text = '<li><a class="top-bar-cart" href="login.jsp"><span class="menu-item-span"><i class="bi bi-emoji-dizzy"></i><span>LOGIN</span></span></a></li>';
+    }
+    it.append(text);
 
-<main>
+</script>
 
-    <header>
-        <div class="px-3 py-2 text-bg-dark">
-            <div class="container">
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-                    </a>
+<!-- Header-->
+<header class="header header-transparent">
+    <div class="container-fluid">
+        <!-- Brand-->
+        <div class="inner-header"><a class="inner-brand" href="index.jsp">Doss</a></div>
+        <!-- Navigation-->
+        <div class="inner-navigation collapse">
+            <div class="inner-nav">
+                <ul>
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="index.jsp"><span class="menu-item-span">Home</span></a>
+                        <div class="mega-menu">
+                            <ul class="sub-menu mega-menu-row" data-background="assets/images/menu-3.jpg">
+                                <!-- Column 1-->
+                                <li class="menu-item-has-children mega-menu-col"><a href="index.jsp">Multi Page</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Parallax</a></li>
+                                        <li><a href="index-3.html">Slider - Fade</a></li>
+                                        <li><a href="index-2.html">Slider - Slide</a></li>
+                                        <li><a href="index-7.html">Gradient Style 1</a></li>
+                                        <li><a href="index-8.html">Gradient Style 2</a></li>
+                                        <li><a href="index-6.html">Local Video</a></li>
+                                        <li><a href="index-5.html">Vimeo Video</a></li>
+                                        <li><a href="index-4.html">Youtube Video</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Column 2-->
+                                <li class="menu-item-has-children mega-menu-col"><a href="#">One Page</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="op-index.html">Parallax</a></li>
+                                        <li><a href="op-index-3.html">Slider - Fade</a></li>
+                                        <li><a href="op-index-2.html">Slider - Slide</a></li>
+                                        <li><a href="op-index-7.html">Gradient Style 1</a></li>
+                                        <li><a href="op-index-8.html">Gradient Style 2</a></li>
+                                        <li><a href="op-index-6.html">Local Video</a></li>
+                                        <li><a href="op-index-5.html">Vimeo Video</a></li>
+                                        <li><a href="op-index-4.html">Youtube Video</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="accounts.jsp"><span class="menu-item-span">계좌</span></a>
+                        <div class="mega-menu">
+                            <ul class="sub-menu mega-menu-row" data-background="assets/images/menu-1.jpg">
+                                <!-- Column 1-->
+                                <li class="menu-item-has-children mega-menu-col"><a href="accounts.jsp">Pages 1</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-1.html">About Us 1</a></li>
+                                        <li><a href="about-2.html">About Us 2</a></li>
+                                        <li><a href="services-1.html">Services 1</a></li>
+                                        <li><a href="services-2.html">Services 2</a></li>
+                                        <li><a href="timeline.html">Timeline</a></li>
+                                        <li><a href="pricing-1.html">Pricing</a></li>
+                                        <li><a href="faqs.html">FAQs</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Column 2-->
+                                <li class="menu-item-has-children mega-menu-col"><a href="#">Pages 2</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="sign-in.html">Sign in</a></li>
+                                        <li><a href="sign-up.html">Sign Up</a></li>
+                                        <li><a href="recover-password.html">Password</a></li>
+                                        <li><a href="contact-3.html">Contact</a></li>
+                                        <li><a href="contact-2.html">Map Contact</a></li>
+                                        <li><a href="contact-1.html">Image Contact</a></li>
+                                        <li><a href="invoice.html">Invoice</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item-has-children"><a href="consume.jsp"><span class="menu-item-span">소비</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="portfolio-7.html">Carousel</a></li>
+                            <li class="menu-item-has-children"><a href="consume.jsp">Wide</a>
+                                <ul class="sub-menu">
+                                    <li><a href="portfolio-1.html">5 Columns</a></li>
+                                    <li><a href="portfolio-2.html">4 Columns</a></li>
+                                    <li><a href="portfolio-3.html">3 Columns</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="consume.jsp">Boxed</a>
+                                <ul class="sub-menu">
+                                    <li><a href="portfolio-4.html">4 Columns</a></li>
+                                    <li><a href="portfolio-5.html">3 Columns</a></li>
+                                    <li><a href="portfolio-6.html">2 Columns</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="consume.jsp">Single</a>
+                                <ul class="sub-menu">
+                                    <li><a href="portfolio-single-1.html">Sidebar Stack</a></li>
+                                    <li><a href="portfolio-single-2.html">Sidebar Slides</a></li>
+                                    <li><a href="portfolio-single-3.html">Sidebar Gallery</a></li>
+                                    <li><a href="portfolio-single-4.html">Centered Stack</a></li>
+                                    <li><a href="portfolio-single-5.html">Centered Slides</a></li>
+                                    <li><a href="portfolio-single-6.html">Centered Gallery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="hobby.jsp"><span class="menu-item-span">습관</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Classic</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-1.html">Right Sidebar</a></li>
+                                    <li><a href="blog-2.html">Left Sidebar</a></li>
+                                    <li><a href="blog-3.html">No Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Masonry</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-4.html">Right Sidebar</a></li>
+                                    <li><a href="blog-5.html">Left Sidebar</a></li>
+                                    <li><a href="blog-6.html">No Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Side Image</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-7.html">Right Sidebar</a></li>
+                                    <li><a href="blog-8.html">Left Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="hobby.jsp">Single Post</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-single-1.html">Right Sidebar</a></li>
+                                    <li><a href="blog-single-2.html">Left Sidebar</a></li>
+                                    <li><a href="blog-single-3.html">No Sidebar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
 
-                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                        <li>
-                            <a href="index.jsp" class="nav-link text-secondary">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
-                                Orders
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                                Products
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                                Customers
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="menu-item-has-children"><a href="shop.jsp"><span class="menu-item-span">상점</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="shop-grid-1.html">Shop 2 Columns</a></li>
+                            <li><a href="shop-grid-2.html">Shop 3 Columns</a></li>
+                            <li><a href="shop-grid-3.html">Shop 4 Columns</a></li>
+                            <li><a href="shop-single-1.html">Single Product</a></li>
+                            <li><a href="shop-checkout.html">Checkout</a></li>
+                            <li><a href="shop-cart-1.html">Cart</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#"><span class="menu-item-span">인사</span></a>
+                        <div class="mega-menu">
+                            <ul class="sub-menu mega-menu-row" data-background="assets/images/menu-2.jpg">
+                                <!-- Column 1-->
+                                <li class="menu-item-has-children mega-menu-col"><a href="#">Group 1</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="components-alerts.html"><i class="fas fa-exclamation-triangle"></i> Alerts</a></li>
+                                        <li><a href="components-accordion.html"><i class="fas fa-plus-square"></i> Accordion</a></li>
+                                        <li><a href="components-buttons.html"><i class="fas fa-link"></i> Buttons</a></li>
+                                        <li><a href="components-clients.html"><i class="fab fa-amazon"></i> Clients</a></li>
+                                        <li><a href="components-counters.html"><i class="fas fa-superscript"></i> Counters</a></li>
+                                        <li><a href="components-maps.html"><i class="fas fa-map"></i> Google Maps</a></li>
+                                        <li><a href="components-grid.html"><i class="fas fa-th"></i> Grid</a></li>
+                                        <li><a href="components-hero.html"><i class="fas fa-object-ungroup"></i> Hero</a></li>
+                                        <li><a href="components-iconbox.html"><i class="fas fa-bold"></i> IсonBox</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Column 2-->
+                                <li class="menu-item-has-children mega-menu-col"><a href="#">Group 2</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="components-forms.html"><i class="fas fa-align-justify"></i> Inputs</a></li>
+                                        <li><a href="components-modal.html"><i class="fas fa-plus-square"></i> Modal</a></li>
+                                        <li><a href="components-pie.html"><i class="fas fa-chart-pie"></i> Pie charts</a></li>
+                                        <li><a href="components-pricing.html"><i class="fas fa-dollar-sign"></i> Pricing Tables</a></li>
+                                        <li><a href="components-progress.html"><i class="fas fa-tasks"></i> Progress Bars</a></li>
+                                        <li><a href="components-sections.html"><i class="fas fa-object-ungroup"></i> Sections</a></li>
+                                        <li><a href="components-sliders.html"><i class="fas fa-images"></i> Sliders</a></li>
+                                        <li><a href="components-tabs.html"><i class="fas fa-columns"></i> Tabs</a></li>
+                                        <li><a href="components-team.html"><i class="far fa-user-circle"></i> Team</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Column 3-->
+                                <li class="menu-item-has-children mega-menu-col"><a href="#">Group 3</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="components-testimonials.html"><i class="fas fa-quote-right"></i> Testimonials</a></li>
+                                        <li><a href="components-tooltips.html"><i class="far fa-question-circle"></i> Tooltips</a></li>
+                                        <li><a href="components-typography.html"><i class="fas fa-font"></i> Typography</a></li>
+                                        <li><a href="components-video.html"><i class="fab fa-youtube"></i> Video</a></li>
+                                        <li><a href="documentation.html"><i class="fas fa-info-circle"></i> Documentation</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <%--                    <li><a href="start.html"><span class="menu-item-span">Demos</span></a></li>--%>
+                </ul>
             </div>
         </div>
-        <div class="px-3 py-2 border-bottom mb-3">
-            <div class="container d-flex flex-wrap justify-content-center">
-                <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                </form>
-
-                <div class="text-end">
-                    <button type="button" class="btn btn-light text-dark me-2">Login</button>
-                    <button type="button" class="btn btn-primary">Sign-up</button>
-                </div>
-            </div>
+        <%
+            if(session.getAttribute("userid") == null) {
+                out.println("<a href='login.jsp'>로그인</a>");
+            }
+            else {
+                String userid = (String)session.getAttribute("userid");
+                out.println(userid+"님 반갑습니다.<br>");
+                out.println("<a href='logout.jsp'>로그아웃</a>");
+            }
+        %>
+        <div class="extra-nav">
+            <ul>
+                <li><a class="top-bar-cart" href="login.jsp"><span class="menu-item-span"><i class="bi bi-emoji-dizzy"></i></span></a></li>
+            </ul>
         </div>
-    </header>
-
-    <div class="b-example-divider"></div>
-</main>
-
-
-<script src="assets(download)/dist/js/bootstrap.bundle.min.js"></script>
-
-
-</body>
-</html>
+    </div>
+</header>
+<!-- Header end-->

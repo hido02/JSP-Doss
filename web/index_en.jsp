@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="demo-btn">
-                                <a class="btn btn-circle btn-success" href="#"><span class="btn-icon-left far fa-gem"></span> 한글</a><a class="btn btn-circle btn-danger" href="index_en.jsp"><span class="btn-icon-left far fa-gem"></span> English</a>
+                                <a class="btn btn-circle btn-success" href="index.jsp"><span class="btn-icon-left far fa-gem"></span> 한글</a><a class="btn btn-circle btn-danger" href="index_en.jsp"><span class="btn-icon-left far fa-gem"></span> English</a>
                                 <!-- Buttons end-->
                                 </p>
                 </div>
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <p class="m-b-30"><img src="assets/images/main/about-4.jpg" alt=""></p>
+                    <p class="m-b-30"><img src="assets/images/main/display.PNG" alt=""></p>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <h2>Detective in Basics. Manage my money, wild</h2>

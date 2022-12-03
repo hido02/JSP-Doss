@@ -67,9 +67,10 @@
                                 <input class="form-control" type="password" placeholder="Pasword" name="password">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-block btn-round btn-brand" type="submit" onClick="checkLogin()">Login</button>
+                                <button class="btn btn-block btn-round btn-brand" type="submit" href="loginOK.jsp">Login</button>
                             </div>
                         </form>
+<%--                        <button class="btn btn-block btn-round btn-brand" type="submit" href="login_ok.jsp">Login</button>--%>
                     </div>
                     <div class="m-b-20">
                         <p><small>Dont have an account yet? <a href="join.jsp">Create account</a></small></p>

@@ -46,7 +46,7 @@
                         <h6>Create a new account</h6>
                     </div>
                     <div class="m-b-20">
-                        <form action="join_ok.jsp" method="post">
+                        <form action="login.jsp" method="post">
                         <div class="form-group">
                             <input class="form-control" type="text" placeholder="Name" name="name">
                         </div>
